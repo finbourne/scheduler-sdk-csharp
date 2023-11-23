@@ -1,0 +1,11 @@
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/bin/Release/net6.0/Finbourne.Scheduler.Sdk.xml
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/bin/Release/net6.0/Finbourne.Scheduler.Sdk.deps.json
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/bin/Release/net6.0/Finbourne.Scheduler.Sdk.dll
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/bin/Release/net6.0/Finbourne.Scheduler.Sdk.pdb
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/obj/Release/net6.0/Finbourne.Scheduler.Sdk.csproj.AssemblyReference.cache
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/obj/Release/net6.0/Finbourne.Scheduler.Sdk.GeneratedMSBuildEditorConfig.editorconfig
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/obj/Release/net6.0/Finbourne.Scheduler.Sdk.csproj.CoreCompileInputs.cache
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/obj/Release/net6.0/Finbourne.Scheduler.Sdk.dll
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/obj/Release/net6.0/refint/Finbourne.Scheduler.Sdk.dll
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/obj/Release/net6.0/Finbourne.Scheduler.Sdk.pdb
+/tmp/build/b2708ad5/scheduler-sdk-csharp-code/sdk/Finbourne.Scheduler.Sdk/obj/Release/net6.0/ref/Finbourne.Scheduler.Sdk.dll
