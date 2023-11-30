@@ -6,6 +6,7 @@
  */
 
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
 namespace Finbourne.Scheduler.Sdk.Extensions
 {
@@ -42,6 +43,7 @@ namespace Finbourne.Scheduler.Sdk.Extensions
         /// <summary>
         /// Finbourne-scheduler Api Url
         /// </summary>
+        [ConfigurationKeyName("finbourne-schedulerUrl")]
         public string BaseUrl { get; set; }
 
         /// <summary>
