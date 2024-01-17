@@ -157,7 +157,7 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// Time To Live of the job run in seconds  Defaults to 5 minutes(300)
         /// </summary>
         /// <value>Time To Live of the job run in seconds  Defaults to 5 minutes(300)</value>
-        [DataMember(Name = "ttl", EmitDefaultValue = false)]
+        [DataMember(Name = "ttl", EmitDefaultValue = true)]
         public int Ttl { get; set; }
 
         /// <summary>
