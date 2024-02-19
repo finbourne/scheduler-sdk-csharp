@@ -48,7 +48,7 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <param name="maxMemory">Specifies the maximum amount of memory to be allocated for the job.</param>
         /// <param name="argumentDefinitions">All arguments for this job to run (required).</param>
         /// <param name="commandLineArgumentSeparator">Value to separate command line arguments  e.g : If a job has a command line argument named &#39;folder&#39; and the runtime value is &#39;s3://path&#39; then this  would be supplied to the command as &#39;folder{separatorValue}s3://path&#39;  Default to a space.</param>
-        /// <param name="requiredResources">requiredResources (required).</param>
+        /// <param name="requiredResources">requiredResources.</param>
         public UpdateJobRequest(string name = default(string), string author = default(string), string description = default(string), string imageName = default(string), string imageTag = default(string), int ttl = default(int), string minCpu = default(string), string maxCpu = default(string), string minMemory = default(string), string maxMemory = default(string), Dictionary<string, ArgumentDefinition> argumentDefinitions = default(Dictionary<string, ArgumentDefinition>), string commandLineArgumentSeparator = default(string), RequiredResources requiredResources = default(RequiredResources))
         {
             // to ensure "name" is required (not null)
@@ -81,12 +81,6 @@ namespace Finbourne.Scheduler.Sdk.Model
                 throw new ArgumentNullException("argumentDefinitions is a required property for UpdateJobRequest and cannot be null");
             }
             this.ArgumentDefinitions = argumentDefinitions;
-            // to ensure "requiredResources" is required (not null)
-            if (requiredResources == null)
-            {
-                throw new ArgumentNullException("requiredResources is a required property for UpdateJobRequest and cannot be null");
-            }
-            this.RequiredResources = requiredResources;
             this.Author = author;
             this.Ttl = ttl;
             this.MinCpu = minCpu;
@@ -94,6 +88,7 @@ namespace Finbourne.Scheduler.Sdk.Model
             this.MinMemory = minMemory;
             this.MaxMemory = maxMemory;
             this.CommandLineArgumentSeparator = commandLineArgumentSeparator;
+            this.RequiredResources = requiredResources;
         }
 
         /// <summary>
@@ -183,7 +178,7 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <summary>
         /// Gets or Sets RequiredResources
         /// </summary>
-        [DataMember(Name = "requiredResources", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "requiredResources", EmitDefaultValue = false)]
         public RequiredResources RequiredResources { get; set; }
 
         /// <summary>

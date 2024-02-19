@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **MaxMemory** | **string** | Specifies the maximum amount of memory (in GiB) to be allocated for the job | [optional] 
 **ArgumentDefinitions** | [**Dictionary&lt;string, ArgumentDefinition&gt;**](ArgumentDefinition.md) | All arguments for this job to run | [optional] 
 **CommandLineArgumentSeparator** | **string** | Value to separate command line arguments  e.g : If a job has a command line argument named &#39;folder&#39; and the runtime value is &#39;s3://path&#39; then this  would be supplied to the command as &#39;folder{separatorValue}s3://path&#39;  Default to a space | [optional] 
-**RequiredResources** | [**RequiredResources**](RequiredResources.md) |  | 
+**RequiredResources** | [**RequiredResources**](RequiredResources.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
