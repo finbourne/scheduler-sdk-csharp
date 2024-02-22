@@ -44,7 +44,7 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <param name="owner">Name of owner of this schedule.</param>
         /// <param name="arguments">All arguments specified by this Schedule that will be passed in to the Job.</param>
         /// <param name="trigger">trigger.</param>
-        /// <param name="notifications">Notifications for this Schedule (required).</param>
+        /// <param name="notifications">Notifications for this Schedule.</param>
         /// <param name="enabled">Specify whether schedule is enabled or not  Defaults to true.</param>
         /// <param name="useAsAuth">Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request.</param>
         public CreateScheduleRequest(ResourceId scheduleId = default(ResourceId), ResourceId jobId = default(ResourceId), string name = default(string), string description = default(string), string author = default(string), string owner = default(string), Dictionary<string, string> arguments = default(Dictionary<string, string>), Trigger trigger = default(Trigger), List<Notification> notifications = default(List<Notification>), bool enabled = default(bool), string useAsAuth = default(string))
@@ -73,16 +73,11 @@ namespace Finbourne.Scheduler.Sdk.Model
                 throw new ArgumentNullException("description is a required property for CreateScheduleRequest and cannot be null");
             }
             this.Description = description;
-            // to ensure "notifications" is required (not null)
-            if (notifications == null)
-            {
-                throw new ArgumentNullException("notifications is a required property for CreateScheduleRequest and cannot be null");
-            }
-            this.Notifications = notifications;
             this.Author = author;
             this.Owner = owner;
             this.Arguments = arguments;
             this.Trigger = trigger;
+            this.Notifications = notifications;
             this.Enabled = enabled;
             this.UseAsAuth = useAsAuth;
         }
@@ -144,7 +139,7 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// Notifications for this Schedule
         /// </summary>
         /// <value>Notifications for this Schedule</value>
-        [DataMember(Name = "notifications", IsRequired = true, EmitDefaultValue = true)]
+        [DataMember(Name = "notifications", EmitDefaultValue = true)]
         public List<Notification> Notifications { get; set; }
 
         /// <summary>

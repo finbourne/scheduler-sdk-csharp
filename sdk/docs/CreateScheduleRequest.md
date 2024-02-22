@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **Owner** | **string** | Name of owner of this schedule | [optional] 
 **Arguments** | **Dictionary&lt;string, string&gt;** | All arguments specified by this Schedule that will be passed in to the Job | [optional] 
 **Trigger** | [**Trigger**](Trigger.md) |  | [optional] 
-**Notifications** | [**List&lt;Notification&gt;**](Notification.md) | Notifications for this Schedule | 
+**Notifications** | [**List&lt;Notification&gt;**](Notification.md) | Notifications for this Schedule | [optional] 
 **Enabled** | **bool** | Specify whether schedule is enabled or not  Defaults to true | [optional] 
 **UseAsAuth** | **string** | Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request | [optional] 
 
