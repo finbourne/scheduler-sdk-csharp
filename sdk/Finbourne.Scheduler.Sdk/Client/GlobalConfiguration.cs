@@ -6,6 +6,7 @@
  */
 
 using System.Collections.Generic;
+using Finbourne.Scheduler.Sdk.Extensions;
 
 namespace Finbourne.Scheduler.Sdk.Client
 {

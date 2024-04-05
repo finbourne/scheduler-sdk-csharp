@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
+using Finbourne.Scheduler.Sdk.Extensions;
 using Finbourne.Scheduler.Sdk.Client.Auth;
 
 namespace Finbourne.Scheduler.Sdk.Client
