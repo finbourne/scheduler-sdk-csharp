@@ -11,5 +11,5 @@ Name | Type | Description | Notes
 **Status** | **string** | Status of the started schedule | [optional] 
 **Result** | **string** | Link to the result of the job run when completed | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
 

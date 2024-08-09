@@ -13,5 +13,5 @@ Name | Type | Description | Notes
 **Negligible** | **int?** | The number of Negligible severity vulnerabilities | [optional] 
 **Unknown** | **int?** | The number of Unknown severity vulnerabilities | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
 

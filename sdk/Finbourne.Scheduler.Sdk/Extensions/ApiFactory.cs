@@ -65,7 +65,7 @@ namespace Finbourne.Scheduler.Sdk.Extensions
                 if (string.IsNullOrWhiteSpace(apiConfiguration.BaseUrl))
                     throw new ArgumentNullException(
                         nameof(apiConfiguration.BaseUrl),
-                        $"BaseUrl Uri missing. Please specify either FBN_FINBOURNE-SCHEDULER_API_URL environment variable or finbourne-schedulerUrl in secrets.json.");
+                        $"BaseUrl Uri missing. Please specify either FBN_SCHEDULER_URL environment variable or schedulerUrl in secrets.json.");
 
                 throw new UriFormatException($"Invalid Uri: {apiConfiguration.BaseUrl}");
             }

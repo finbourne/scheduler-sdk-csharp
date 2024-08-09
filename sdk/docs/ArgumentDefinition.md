@@ -13,5 +13,5 @@ Name | Type | Description | Notes
 **PassedAs** | **string** | Specifies how this argument should be passed in  Allowed values are: CommandLine or EnvironmentVariable    Defaults to: CommandLine | 
 **DefaultValue** | **string** | Specify a default value for this argument if no value is provided  The value needs to be convertible to the associated data type | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
 
