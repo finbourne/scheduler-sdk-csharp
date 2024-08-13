@@ -191,7 +191,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfJobDefinition</returns>
         ApiResponse<ResourceListOfJobDefinition> ListJobsWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
         /// <summary>
-        /// [EXPERIMENTAL] RunJob: Run a job immediately
+        /// RunJob: Run a job immediately
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -202,7 +202,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         StartJobResponse RunJob(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0);
 
         /// <summary>
-        /// [EXPERIMENTAL] RunJob: Run a job immediately
+        /// RunJob: Run a job immediately
         /// </summary>
         /// <remarks>
         /// 
@@ -443,7 +443,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfJobDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<ResourceListOfJobDefinition>> ListJobsWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// [EXPERIMENTAL] RunJob: Run a job immediately
+        /// RunJob: Run a job immediately
         /// </summary>
         /// <remarks>
         /// 
@@ -458,7 +458,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<StartJobResponse> RunJobAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// [EXPERIMENTAL] RunJob: Run a job immediately
+        /// RunJob: Run a job immediately
         /// </summary>
         /// <remarks>
         /// 
@@ -1980,7 +1980,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RunJob: Run a job immediately 
+        /// RunJob: Run a job immediately 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -1995,7 +1995,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RunJob: Run a job immediately 
+        /// RunJob: Run a job immediately 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -2088,7 +2088,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RunJob: Run a job immediately 
+        /// RunJob: Run a job immediately 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -2104,7 +2104,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RunJob: Run a job immediately 
+        /// RunJob: Run a job immediately 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>

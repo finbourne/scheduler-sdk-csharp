@@ -11,7 +11,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/scheduler2*
 | [**GetRunHistory**](JobsApi.md#getrunhistory) | **GET** /api/jobs/history/{runId} | [EXPERIMENTAL] GetRunHistory: Get the history for a single job run |
 | [**GetSchedulesForAJob**](JobsApi.md#getschedulesforajob) | **GET** /api/jobs/{scope}/{code}/schedules | [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job |
 | [**ListJobs**](JobsApi.md#listjobs) | **GET** /api/jobs | [EXPERIMENTAL] ListJobs: List the available jobs |
-| [**RunJob**](JobsApi.md#runjob) | **POST** /api/jobs/{scope}/{code}/$run | [EXPERIMENTAL] RunJob: Run a job immediately |
+| [**RunJob**](JobsApi.md#runjob) | **POST** /api/jobs/{scope}/{code}/$run | RunJob: Run a job immediately |
 | [**UpdateJob**](JobsApi.md#updatejob) | **PUT** /api/jobs/{scope}/{code} | [EXPERIMENTAL] UpdateJob: Update a JobDefinition |
 
 <a id="createjob"></a>
@@ -745,7 +745,7 @@ catch (ApiException e)
 # **RunJob**
 > StartJobResponse RunJob (string scope, string code, StartJobRequest startJobRequest)
 
-[EXPERIMENTAL] RunJob: Run a job immediately
+RunJob: Run a job immediately
 
 ### Example
 ```csharp
@@ -784,7 +784,7 @@ namespace Examples
 
             try
             {
-                // [EXPERIMENTAL] RunJob: Run a job immediately
+                // RunJob: Run a job immediately
                 StartJobResponse result = apiInstance.RunJob(scope, code, startJobRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -805,7 +805,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] RunJob: Run a job immediately
+    // RunJob: Run a job immediately
     ApiResponse<StartJobResponse> response = apiInstance.RunJobWithHttpInfo(scope, code, startJobRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
