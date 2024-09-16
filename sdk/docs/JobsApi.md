@@ -50,11 +50,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<JobsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<JobsApi>();
             var createJobRequest = new CreateJobRequest(); // CreateJobRequest | The request to create a new job
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // JobDefinition result = apiInstance.CreateJob(createJobRequest, opts: opts);
+
                 // [EXPERIMENTAL] CreateJob: Create a new job
                 JobDefinition result = apiInstance.CreateJob(createJobRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -151,12 +162,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<JobsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<JobsApi>();
             var scope = "scope_example";  // string | The scope of the job
             var code = "code_example";  // string | The code of the job
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfScheduleDefinition result = apiInstance.DeleteJob(scope, code, opts: opts);
+
                 // [EXPERIMENTAL] DeleteJob: Delete a job
                 ResourceListOfScheduleDefinition result = apiInstance.DeleteJob(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -254,6 +276,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<JobsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<JobsApi>();
             var page = "page_example";  // string? | The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional) 
             var sortBy = new List<string>?(); // List<string>? | Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName. (optional) 
@@ -263,6 +293,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfJobHistory result = apiInstance.GetHistory(page, sortBy, start, limit, filter, opts: opts);
+
                 // [EXPERIMENTAL] GetHistory: Get the history of job runs
                 ResourceListOfJobHistory result = apiInstance.GetHistory(page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -363,11 +396,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<JobsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<JobsApi>();
             var runId = "runId_example";  // string | The RunId of the job run
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // string result = apiInstance.GetJobConsoleOutput(runId, opts: opts);
+
                 // [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
                 string result = apiInstance.GetJobConsoleOutput(runId);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -464,11 +508,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<JobsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<JobsApi>();
             var runId = "runId_example";  // string | The unique ID of the run
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // JobRunResult result = apiInstance.GetRunHistory(runId, opts: opts);
+
                 // [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
                 JobRunResult result = apiInstance.GetRunHistory(runId);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -565,12 +620,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<JobsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<JobsApi>();
             var scope = "scope_example";  // string | The scope of the job
             var code = "code_example";  // string | The code of the job
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfScheduleDefinition result = apiInstance.GetSchedulesForAJob(scope, code, opts: opts);
+
                 // [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
                 ResourceListOfScheduleDefinition result = apiInstance.GetSchedulesForAJob(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -668,6 +734,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<JobsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<JobsApi>();
             var page = "page_example";  // string? | The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional) 
             var sortBy = new List<string>?(); // List<string>? | Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName. (optional) 
@@ -677,6 +751,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfJobDefinition result = apiInstance.ListJobs(page, sortBy, start, limit, filter, opts: opts);
+
                 // [EXPERIMENTAL] ListJobs: List the available jobs
                 ResourceListOfJobDefinition result = apiInstance.ListJobs(page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -777,6 +854,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<JobsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<JobsApi>();
             var scope = "scope_example";  // string | The scope of the job
             var code = "code_example";  // string | The code of the job
@@ -784,6 +869,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // StartJobResponse result = apiInstance.RunJob(scope, code, startJobRequest, opts: opts);
+
                 // RunJob: Run a job immediately
                 StartJobResponse result = apiInstance.RunJob(scope, code, startJobRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -882,6 +970,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<JobsApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<JobsApi>();
             var scope = "scope_example";  // string | 
             var code = "code_example";  // string | 
@@ -889,6 +985,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // JobDefinition result = apiInstance.UpdateJob(scope, code, updateJobRequest, opts: opts);
+
                 // [EXPERIMENTAL] UpdateJob: Update a JobDefinition
                 JobDefinition result = apiInstance.UpdateJob(scope, code, updateJobRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

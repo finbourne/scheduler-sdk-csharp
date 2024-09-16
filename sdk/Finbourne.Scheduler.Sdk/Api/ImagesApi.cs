@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Scheduler.Sdk.Client;
+using Finbourne.Scheduler.Sdk.Extensions;
 using Finbourne.Scheduler.Sdk.Client.Auth;
 using Finbourne.Scheduler.Sdk.Model;
 
@@ -36,8 +37,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>string</returns>
-        string DeleteImage(string name, int operationIndex = 0);
+        string DeleteImage(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image
@@ -48,16 +50,18 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteImageWithHttpInfo(string name, int operationIndex = 0);
+        ApiResponse<string> DeleteImageWithHttpInfo(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DownloadImage: Download Docker Image
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>System.IO.Stream</returns>
-        System.IO.Stream DownloadImage(string name, int operationIndex = 0);
+        System.IO.Stream DownloadImage(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] DownloadImage: Download Docker Image
@@ -68,16 +72,18 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> DownloadImageWithHttpInfo(string name, int operationIndex = 0);
+        ApiResponse<System.IO.Stream> DownloadImageWithHttpInfo(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Image</returns>
-        Image GetImage(string name, int operationIndex = 0);
+        Image GetImage(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
@@ -88,8 +94,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Image</returns>
-        ApiResponse<Image> GetImageWithHttpInfo(string name, int operationIndex = 0);
+        ApiResponse<Image> GetImageWithHttpInfo(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListImages: List all images under same image repository
         /// </summary>
@@ -101,8 +108,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfImageSummary</returns>
-        ResourceListOfImageSummary ListImages(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ResourceListOfImageSummary ListImages(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListImages: List all images under same image repository
@@ -118,8 +126,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfImageSummary</returns>
-        ApiResponse<ResourceListOfImageSummary> ListImagesWithHttpInfo(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ApiResponse<ResourceListOfImageSummary> ListImagesWithHttpInfo(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories
         /// </summary>
@@ -130,8 +139,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfRepository</returns>
-        ResourceListOfRepository ListRepositories(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ResourceListOfRepository ListRepositories(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories
@@ -146,8 +156,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfRepository</returns>
-        ApiResponse<ResourceListOfRepository> ListRepositoriesWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ApiResponse<ResourceListOfRepository> ListRepositoriesWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
         /// </summary>
@@ -157,8 +168,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uploadImageRequest">Request to upload image</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>UploadImageInstructions</returns>
-        UploadImageInstructions UploadImage(UploadImageRequest uploadImageRequest, int operationIndex = 0);
+        UploadImageInstructions UploadImage(UploadImageRequest uploadImageRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
@@ -169,8 +181,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uploadImageRequest">Request to upload image</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UploadImageInstructions</returns>
-        ApiResponse<UploadImageInstructions> UploadImageWithHttpInfo(UploadImageRequest uploadImageRequest, int operationIndex = 0);
+        ApiResponse<UploadImageInstructions> UploadImageWithHttpInfo(UploadImageRequest uploadImageRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -190,8 +203,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<string> DeleteImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image
@@ -203,8 +217,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DownloadImage: Download Docker Image
         /// </summary>
@@ -215,8 +230,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> DownloadImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<System.IO.Stream> DownloadImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] DownloadImage: Download Docker Image
@@ -228,8 +244,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
         /// </summary>
@@ -240,8 +257,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of Image</returns>
-        System.Threading.Tasks.Task<Image> GetImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<Image> GetImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
@@ -253,8 +271,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Image)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Image>> GetImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<Image>> GetImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListImages: List all images under same image repository
         /// </summary>
@@ -270,8 +289,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfImageSummary</returns>
-        System.Threading.Tasks.Task<ResourceListOfImageSummary> ListImagesAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListOfImageSummary> ListImagesAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListImages: List all images under same image repository
@@ -288,8 +308,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfImageSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfImageSummary>> ListImagesWithHttpInfoAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfImageSummary>> ListImagesWithHttpInfoAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories
         /// </summary>
@@ -304,8 +325,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfRepository</returns>
-        System.Threading.Tasks.Task<ResourceListOfRepository> ListRepositoriesAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListOfRepository> ListRepositoriesAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories
@@ -321,8 +343,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfRepository)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfRepository>> ListRepositoriesWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfRepository>> ListRepositoriesWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
         /// </summary>
@@ -333,8 +356,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="uploadImageRequest">Request to upload image</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of UploadImageInstructions</returns>
-        System.Threading.Tasks.Task<UploadImageInstructions> UploadImageAsync(UploadImageRequest uploadImageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UploadImageInstructions> UploadImageAsync(UploadImageRequest uploadImageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
@@ -346,8 +370,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="uploadImageRequest">Request to upload image</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UploadImageInstructions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UploadImageInstructions>> UploadImageWithHttpInfoAsync(UploadImageRequest uploadImageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<UploadImageInstructions>> UploadImageWithHttpInfoAsync(UploadImageRequest uploadImageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -380,9 +405,15 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns></returns>
         public ImagesApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Scheduler.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Scheduler.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Scheduler.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Scheduler.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Scheduler.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Scheduler.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Scheduler.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -471,10 +502,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>string</returns>
-        public string DeleteImage(string name, int operationIndex = 0)
+        public string DeleteImage(string name, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<string> localVarResponse = DeleteImageWithHttpInfo(name);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<string> localVarResponse = DeleteImageWithHttpInfo(name, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -484,8 +516,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of string</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<string> DeleteImageWithHttpInfo(string name, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<string> DeleteImageWithHttpInfo(string name, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -494,6 +527,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -558,10 +601,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<string> DeleteImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<string> localVarResponse = await DeleteImageWithHttpInfoAsync(name, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<string> localVarResponse = await DeleteImageWithHttpInfoAsync(name, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -572,8 +616,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<string>> DeleteImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<string>> DeleteImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -583,6 +628,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -647,10 +702,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream DownloadImage(string name, int operationIndex = 0)
+        public System.IO.Stream DownloadImage(string name, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream> localVarResponse = DownloadImageWithHttpInfo(name);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream> localVarResponse = DownloadImageWithHttpInfo(name, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -660,8 +716,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream> DownloadImageWithHttpInfo(string name, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream> DownloadImageWithHttpInfo(string name, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -670,6 +727,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -734,10 +801,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> DownloadImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<System.IO.Stream> DownloadImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream> localVarResponse = await DownloadImageWithHttpInfoAsync(name, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream> localVarResponse = await DownloadImageWithHttpInfoAsync(name, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -748,8 +816,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream>> DownloadImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream>> DownloadImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -759,6 +828,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -823,10 +902,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Image</returns>
-        public Image GetImage(string name, int operationIndex = 0)
+        public Image GetImage(string name, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<Image> localVarResponse = GetImageWithHttpInfo(name);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<Image> localVarResponse = GetImageWithHttpInfo(name, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -836,8 +916,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Image</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<Image> GetImageWithHttpInfo(string name, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<Image> GetImageWithHttpInfo(string name, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -846,6 +927,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -910,10 +1001,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of Image</returns>
-        public async System.Threading.Tasks.Task<Image> GetImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Image> GetImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<Image> localVarResponse = await GetImageWithHttpInfoAsync(name, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<Image> localVarResponse = await GetImageWithHttpInfoAsync(name, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -924,8 +1016,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (Image)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<Image>> GetImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<Image>> GetImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -935,6 +1028,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1004,10 +1107,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfImageSummary</returns>
-        public ResourceListOfImageSummary ListImages(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public ResourceListOfImageSummary ListImages(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary> localVarResponse = ListImagesWithHttpInfo(name, page, sortBy, start, limit, filter);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary> localVarResponse = ListImagesWithHttpInfo(name, page, sortBy, start, limit, filter, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1022,8 +1126,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfImageSummary</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary> ListImagesWithHttpInfo(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary> ListImagesWithHttpInfo(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1032,6 +1137,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1121,10 +1236,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfImageSummary</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfImageSummary> ListImagesAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListOfImageSummary> ListImagesAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary> localVarResponse = await ListImagesWithHttpInfoAsync(name, page, sortBy, start, limit, filter, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary> localVarResponse = await ListImagesWithHttpInfoAsync(name, page, sortBy, start, limit, filter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1140,8 +1256,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfImageSummary)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary>> ListImagesWithHttpInfoAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary>> ListImagesWithHttpInfoAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -1151,6 +1268,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1239,10 +1366,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfRepository</returns>
-        public ResourceListOfRepository ListRepositories(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public ResourceListOfRepository ListRepositories(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository> localVarResponse = ListRepositoriesWithHttpInfo(page, sortBy, start, limit, filter);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository> localVarResponse = ListRepositoriesWithHttpInfo(page, sortBy, start, limit, filter, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1256,10 +1384,21 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfRepository</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository> ListRepositoriesWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository> ListRepositoriesWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1347,10 +1486,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfRepository</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfRepository> ListRepositoriesAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListOfRepository> ListRepositoriesAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository> localVarResponse = await ListRepositoriesWithHttpInfoAsync(page, sortBy, start, limit, filter, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository> localVarResponse = await ListRepositoriesWithHttpInfoAsync(page, sortBy, start, limit, filter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1365,11 +1505,22 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfRepository)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository>> ListRepositoriesWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository>> ListRepositoriesWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1453,10 +1604,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uploadImageRequest">Request to upload image</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>UploadImageInstructions</returns>
-        public UploadImageInstructions UploadImage(UploadImageRequest uploadImageRequest, int operationIndex = 0)
+        public UploadImageInstructions UploadImage(UploadImageRequest uploadImageRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<UploadImageInstructions> localVarResponse = UploadImageWithHttpInfo(uploadImageRequest);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<UploadImageInstructions> localVarResponse = UploadImageWithHttpInfo(uploadImageRequest, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1466,8 +1618,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uploadImageRequest">Request to upload image</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of UploadImageInstructions</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<UploadImageInstructions> UploadImageWithHttpInfo(UploadImageRequest uploadImageRequest, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<UploadImageInstructions> UploadImageWithHttpInfo(UploadImageRequest uploadImageRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'uploadImageRequest' is set
             if (uploadImageRequest == null)
@@ -1476,6 +1629,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -1544,10 +1707,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="uploadImageRequest">Request to upload image</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of UploadImageInstructions</returns>
-        public async System.Threading.Tasks.Task<UploadImageInstructions> UploadImageAsync(UploadImageRequest uploadImageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<UploadImageInstructions> UploadImageAsync(UploadImageRequest uploadImageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<UploadImageInstructions> localVarResponse = await UploadImageWithHttpInfoAsync(uploadImageRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<UploadImageInstructions> localVarResponse = await UploadImageWithHttpInfoAsync(uploadImageRequest, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1558,8 +1722,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="uploadImageRequest">Request to upload image</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (UploadImageInstructions)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<UploadImageInstructions>> UploadImageWithHttpInfoAsync(UploadImageRequest uploadImageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<UploadImageInstructions>> UploadImageWithHttpInfoAsync(UploadImageRequest uploadImageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'uploadImageRequest' is set
             if (uploadImageRequest == null)
@@ -1569,6 +1734,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 

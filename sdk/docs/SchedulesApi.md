@@ -48,11 +48,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SchedulesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SchedulesApi>();
             var createScheduleRequest = new CreateScheduleRequest(); // CreateScheduleRequest | 
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ScheduleDefinition result = apiInstance.CreateSchedule(createScheduleRequest, opts: opts);
+
                 // [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job
                 ScheduleDefinition result = apiInstance.CreateSchedule(createScheduleRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -149,12 +160,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SchedulesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SchedulesApi>();
             var scope = "scope_example";  // string | Scope of the schedule to be deleted
             var code = "code_example";  // string | Code of the schedule to be deleted
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // apiInstance.DeleteSchedule(scope, code, opts: opts);
+
                 // [EXPERIMENTAL] DeleteSchedule: Delete a schedule
                 apiInstance.DeleteSchedule(scope, code);
             }
@@ -248,6 +270,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SchedulesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SchedulesApi>();
             var scope = "scope_example";  // string | Scope of the schedule to be enabled/disabled
             var code = "code_example";  // string | Code of the schedule to be enabled/disabled
@@ -255,6 +285,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ScheduleDefinition result = apiInstance.EnabledSchedule(scope, code, enable, opts: opts);
+
                 // [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
                 ScheduleDefinition result = apiInstance.EnabledSchedule(scope, code, enable);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -353,12 +386,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SchedulesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SchedulesApi>();
             var scope = "scope_example";  // string | The scope of Schedule
             var code = "code_example";  // string | The code of the Schedule
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ScheduleDefinition result = apiInstance.GetSchedule(scope, code, opts: opts);
+
                 // [EXPERIMENTAL] GetSchedule: Get a single Schedule
                 ScheduleDefinition result = apiInstance.GetSchedule(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -456,6 +500,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SchedulesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SchedulesApi>();
             var page = "page_example";  // string? | The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional) 
             var sortBy = new List<string>?(); // List<string>? | Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName. (optional) 
@@ -465,6 +517,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfScheduleDefinition result = apiInstance.ListSchedules(page, sortBy, start, limit, filter, opts: opts);
+
                 // [EXPERIMENTAL] ListSchedules: List the available Schedules
                 ResourceListOfScheduleDefinition result = apiInstance.ListSchedules(page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -565,12 +620,23 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SchedulesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SchedulesApi>();
             var scope = "scope_example";  // string | The schedule scope
             var code = "code_example";  // string | The schedule cde
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // StartScheduleResponse result = apiInstance.RunSchedule(scope, code, opts: opts);
+
                 // [EXPERIMENTAL] RunSchedule: Run a schedule immediately
                 StartScheduleResponse result = apiInstance.RunSchedule(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -668,6 +734,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SchedulesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SchedulesApi>();
             var scope = "scope_example";  // string | Scope of the schedule to be updated
             var code = "code_example";  // string | Code of the schedule to be updated
@@ -675,6 +749,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ScheduleDefinition result = apiInstance.UpdateSchedule(scope, code, updateScheduleRequest, opts: opts);
+
                 // [EXPERIMENTAL] UpdateSchedule: Update a schedule.
                 ScheduleDefinition result = apiInstance.UpdateSchedule(scope, code, updateScheduleRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));

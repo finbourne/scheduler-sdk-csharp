@@ -18,6 +18,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mime;
 using Finbourne.Scheduler.Sdk.Client;
+using Finbourne.Scheduler.Sdk.Extensions;
 using Finbourne.Scheduler.Sdk.Client.Auth;
 using Finbourne.Scheduler.Sdk.Model;
 
@@ -36,8 +37,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createJobRequest">The request to create a new job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>JobDefinition</returns>
-        JobDefinition CreateJob(CreateJobRequest createJobRequest, int operationIndex = 0);
+        JobDefinition CreateJob(CreateJobRequest createJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] CreateJob: Create a new job
@@ -48,8 +50,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createJobRequest">The request to create a new job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of JobDefinition</returns>
-        ApiResponse<JobDefinition> CreateJobWithHttpInfo(CreateJobRequest createJobRequest, int operationIndex = 0);
+        ApiResponse<JobDefinition> CreateJobWithHttpInfo(CreateJobRequest createJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DeleteJob: Delete a job
         /// </summary>
@@ -57,8 +60,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="scope">The scope of the job</param>
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfScheduleDefinition</returns>
-        ResourceListOfScheduleDefinition DeleteJob(string scope, string code, int operationIndex = 0);
+        ResourceListOfScheduleDefinition DeleteJob(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] DeleteJob: Delete a job
@@ -70,8 +74,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="scope">The scope of the job</param>
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfScheduleDefinition</returns>
-        ApiResponse<ResourceListOfScheduleDefinition> DeleteJobWithHttpInfo(string scope, string code, int operationIndex = 0);
+        ApiResponse<ResourceListOfScheduleDefinition> DeleteJobWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetHistory: Get the history of job runs
         /// </summary>
@@ -82,8 +87,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfJobHistory</returns>
-        ResourceListOfJobHistory GetHistory(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ResourceListOfJobHistory GetHistory(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetHistory: Get the history of job runs
@@ -98,16 +104,18 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfJobHistory</returns>
-        ApiResponse<ResourceListOfJobHistory> GetHistoryWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ApiResponse<ResourceListOfJobHistory> GetHistoryWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The RunId of the job run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>string</returns>
-        string GetJobConsoleOutput(string runId, int operationIndex = 0);
+        string GetJobConsoleOutput(string runId, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
@@ -118,16 +126,18 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The RunId of the job run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> GetJobConsoleOutputWithHttpInfo(string runId, int operationIndex = 0);
+        ApiResponse<string> GetJobConsoleOutputWithHttpInfo(string runId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The unique ID of the run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>JobRunResult</returns>
-        JobRunResult GetRunHistory(string runId, int operationIndex = 0);
+        JobRunResult GetRunHistory(string runId, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
@@ -138,8 +148,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The unique ID of the run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of JobRunResult</returns>
-        ApiResponse<JobRunResult> GetRunHistoryWithHttpInfo(string runId, int operationIndex = 0);
+        ApiResponse<JobRunResult> GetRunHistoryWithHttpInfo(string runId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
         /// </summary>
@@ -147,8 +158,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="scope">The scope of the job</param>
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfScheduleDefinition</returns>
-        ResourceListOfScheduleDefinition GetSchedulesForAJob(string scope, string code, int operationIndex = 0);
+        ResourceListOfScheduleDefinition GetSchedulesForAJob(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
@@ -160,8 +172,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="scope">The scope of the job</param>
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfScheduleDefinition</returns>
-        ApiResponse<ResourceListOfScheduleDefinition> GetSchedulesForAJobWithHttpInfo(string scope, string code, int operationIndex = 0);
+        ApiResponse<ResourceListOfScheduleDefinition> GetSchedulesForAJobWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListJobs: List the available jobs
         /// </summary>
@@ -172,8 +185,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfJobDefinition</returns>
-        ResourceListOfJobDefinition ListJobs(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ResourceListOfJobDefinition ListJobs(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListJobs: List the available jobs
@@ -188,8 +202,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfJobDefinition</returns>
-        ApiResponse<ResourceListOfJobDefinition> ListJobsWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0);
+        ApiResponse<ResourceListOfJobDefinition> ListJobsWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// RunJob: Run a job immediately
         /// </summary>
@@ -198,8 +213,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="startJobRequest">The request for starting job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>StartJobResponse</returns>
-        StartJobResponse RunJob(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0);
+        StartJobResponse RunJob(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// RunJob: Run a job immediately
@@ -212,8 +228,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="startJobRequest">The request for starting job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of StartJobResponse</returns>
-        ApiResponse<StartJobResponse> RunJobWithHttpInfo(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0);
+        ApiResponse<StartJobResponse> RunJobWithHttpInfo(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition
         /// </summary>
@@ -222,8 +239,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code"></param>
         /// <param name="updateJobRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>JobDefinition</returns>
-        JobDefinition UpdateJob(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0);
+        JobDefinition UpdateJob(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition
@@ -236,8 +254,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code"></param>
         /// <param name="updateJobRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of JobDefinition</returns>
-        ApiResponse<JobDefinition> UpdateJobWithHttpInfo(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0);
+        ApiResponse<JobDefinition> UpdateJobWithHttpInfo(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -257,8 +276,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="createJobRequest">The request to create a new job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of JobDefinition</returns>
-        System.Threading.Tasks.Task<JobDefinition> CreateJobAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobDefinition> CreateJobAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] CreateJob: Create a new job
@@ -270,8 +290,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="createJobRequest">The request to create a new job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (JobDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobDefinition>> CreateJobWithHttpInfoAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobDefinition>> CreateJobWithHttpInfoAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DeleteJob: Delete a job
         /// </summary>
@@ -283,8 +304,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfScheduleDefinition</returns>
-        System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> DeleteJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> DeleteJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] DeleteJob: Delete a job
@@ -297,8 +319,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfScheduleDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfScheduleDefinition>> DeleteJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfScheduleDefinition>> DeleteJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetHistory: Get the history of job runs
         /// </summary>
@@ -313,8 +336,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfJobHistory</returns>
-        System.Threading.Tasks.Task<ResourceListOfJobHistory> GetHistoryAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListOfJobHistory> GetHistoryAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetHistory: Get the history of job runs
@@ -330,8 +354,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfJobHistory)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfJobHistory>> GetHistoryWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfJobHistory>> GetHistoryWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
         /// </summary>
@@ -342,8 +367,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="runId">The RunId of the job run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> GetJobConsoleOutputAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<string> GetJobConsoleOutputAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
@@ -355,8 +381,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="runId">The RunId of the job run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> GetJobConsoleOutputWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<string>> GetJobConsoleOutputWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
         /// </summary>
@@ -367,8 +394,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="runId">The unique ID of the run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of JobRunResult</returns>
-        System.Threading.Tasks.Task<JobRunResult> GetRunHistoryAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobRunResult> GetRunHistoryAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
@@ -380,8 +408,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="runId">The unique ID of the run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (JobRunResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobRunResult>> GetRunHistoryWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobRunResult>> GetRunHistoryWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
         /// </summary>
@@ -393,8 +422,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfScheduleDefinition</returns>
-        System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> GetSchedulesForAJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> GetSchedulesForAJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
@@ -407,8 +437,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfScheduleDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfScheduleDefinition>> GetSchedulesForAJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfScheduleDefinition>> GetSchedulesForAJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListJobs: List the available jobs
         /// </summary>
@@ -423,8 +454,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfJobDefinition</returns>
-        System.Threading.Tasks.Task<ResourceListOfJobDefinition> ListJobsAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ResourceListOfJobDefinition> ListJobsAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] ListJobs: List the available jobs
@@ -440,8 +472,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfJobDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfJobDefinition>> ListJobsWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<ResourceListOfJobDefinition>> ListJobsWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// RunJob: Run a job immediately
         /// </summary>
@@ -454,8 +487,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="startJobRequest">The request for starting job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of StartJobResponse</returns>
-        System.Threading.Tasks.Task<StartJobResponse> RunJobAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<StartJobResponse> RunJobAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// RunJob: Run a job immediately
@@ -469,8 +503,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="startJobRequest">The request for starting job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (StartJobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StartJobResponse>> RunJobWithHttpInfoAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<StartJobResponse>> RunJobWithHttpInfoAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition
         /// </summary>
@@ -483,8 +518,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="updateJobRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of JobDefinition</returns>
-        System.Threading.Tasks.Task<JobDefinition> UpdateJobAsync(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<JobDefinition> UpdateJobAsync(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition
@@ -498,8 +534,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="updateJobRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (JobDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JobDefinition>> UpdateJobWithHttpInfoAsync(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<JobDefinition>> UpdateJobWithHttpInfoAsync(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
@@ -532,9 +569,15 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns></returns>
         public JobsApi(string basePath)
         {
+            var globalConfiguration = Finbourne.Scheduler.Sdk.Client.GlobalConfiguration.Instance;
             this.Configuration = Finbourne.Scheduler.Sdk.Client.Configuration.MergeConfigurations(
-                Finbourne.Scheduler.Sdk.Client.GlobalConfiguration.Instance,
-                new Finbourne.Scheduler.Sdk.Client.Configuration { BasePath = basePath }
+                globalConfiguration,
+                new Finbourne.Scheduler.Sdk.Client.Configuration
+                {
+                    BasePath = basePath,
+                    TimeoutMs = globalConfiguration.TimeoutMs,
+                    RateLimitRetries = globalConfiguration.RateLimitRetries
+                }
             );
             this.Client = new Finbourne.Scheduler.Sdk.Client.ApiClient(this.Configuration.BasePath);
             this.AsynchronousClient = new Finbourne.Scheduler.Sdk.Client.ApiClient(this.Configuration.BasePath);
@@ -623,10 +666,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createJobRequest">The request to create a new job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>JobDefinition</returns>
-        public JobDefinition CreateJob(CreateJobRequest createJobRequest, int operationIndex = 0)
+        public JobDefinition CreateJob(CreateJobRequest createJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> localVarResponse = CreateJobWithHttpInfo(createJobRequest);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> localVarResponse = CreateJobWithHttpInfo(createJobRequest, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -636,8 +680,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createJobRequest">The request to create a new job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of JobDefinition</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> CreateJobWithHttpInfo(CreateJobRequest createJobRequest, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> CreateJobWithHttpInfo(CreateJobRequest createJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'createJobRequest' is set
             if (createJobRequest == null)
@@ -646,6 +691,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -714,10 +769,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="createJobRequest">The request to create a new job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of JobDefinition</returns>
-        public async System.Threading.Tasks.Task<JobDefinition> CreateJobAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobDefinition> CreateJobAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> localVarResponse = await CreateJobWithHttpInfoAsync(createJobRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> localVarResponse = await CreateJobWithHttpInfoAsync(createJobRequest, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -728,8 +784,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="createJobRequest">The request to create a new job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (JobDefinition)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition>> CreateJobWithHttpInfoAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition>> CreateJobWithHttpInfoAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'createJobRequest' is set
             if (createJobRequest == null)
@@ -739,6 +796,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 
@@ -808,10 +875,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="scope">The scope of the job</param>
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfScheduleDefinition</returns>
-        public ResourceListOfScheduleDefinition DeleteJob(string scope, string code, int operationIndex = 0)
+        public ResourceListOfScheduleDefinition DeleteJob(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> localVarResponse = DeleteJobWithHttpInfo(scope, code);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> localVarResponse = DeleteJobWithHttpInfo(scope, code, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -822,8 +890,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="scope">The scope of the job</param>
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfScheduleDefinition</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> DeleteJobWithHttpInfo(string scope, string code, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> DeleteJobWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -838,6 +907,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -904,10 +983,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfScheduleDefinition</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> DeleteJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> DeleteJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> localVarResponse = await DeleteJobWithHttpInfoAsync(scope, code, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> localVarResponse = await DeleteJobWithHttpInfoAsync(scope, code, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -919,8 +999,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfScheduleDefinition)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition>> DeleteJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition>> DeleteJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -936,6 +1017,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1005,10 +1096,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfJobHistory</returns>
-        public ResourceListOfJobHistory GetHistory(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public ResourceListOfJobHistory GetHistory(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory> localVarResponse = GetHistoryWithHttpInfo(page, sortBy, start, limit, filter);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory> localVarResponse = GetHistoryWithHttpInfo(page, sortBy, start, limit, filter, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1022,10 +1114,21 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfJobHistory</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory> GetHistoryWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory> GetHistoryWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1113,10 +1216,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfJobHistory</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfJobHistory> GetHistoryAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListOfJobHistory> GetHistoryAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory> localVarResponse = await GetHistoryWithHttpInfoAsync(page, sortBy, start, limit, filter, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory> localVarResponse = await GetHistoryWithHttpInfoAsync(page, sortBy, start, limit, filter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1131,11 +1235,22 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfJobHistory)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory>> GetHistoryWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory>> GetHistoryWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1219,10 +1334,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The RunId of the job run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>string</returns>
-        public string GetJobConsoleOutput(string runId, int operationIndex = 0)
+        public string GetJobConsoleOutput(string runId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<string> localVarResponse = GetJobConsoleOutputWithHttpInfo(runId);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<string> localVarResponse = GetJobConsoleOutputWithHttpInfo(runId, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1232,8 +1348,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The RunId of the job run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of string</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<string> GetJobConsoleOutputWithHttpInfo(string runId, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<string> GetJobConsoleOutputWithHttpInfo(string runId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'runId' is set
             if (runId == null)
@@ -1242,6 +1359,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1307,10 +1434,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="runId">The RunId of the job run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> GetJobConsoleOutputAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<string> GetJobConsoleOutputAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<string> localVarResponse = await GetJobConsoleOutputWithHttpInfoAsync(runId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<string> localVarResponse = await GetJobConsoleOutputWithHttpInfoAsync(runId, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1321,8 +1449,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="runId">The RunId of the job run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<string>> GetJobConsoleOutputWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<string>> GetJobConsoleOutputWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'runId' is set
             if (runId == null)
@@ -1332,6 +1461,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1397,10 +1536,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The unique ID of the run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>JobRunResult</returns>
-        public JobRunResult GetRunHistory(string runId, int operationIndex = 0)
+        public JobRunResult GetRunHistory(string runId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult> localVarResponse = GetRunHistoryWithHttpInfo(runId);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult> localVarResponse = GetRunHistoryWithHttpInfo(runId, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1410,8 +1550,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The unique ID of the run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of JobRunResult</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult> GetRunHistoryWithHttpInfo(string runId, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult> GetRunHistoryWithHttpInfo(string runId, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'runId' is set
             if (runId == null)
@@ -1420,6 +1561,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1484,10 +1635,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="runId">The unique ID of the run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of JobRunResult</returns>
-        public async System.Threading.Tasks.Task<JobRunResult> GetRunHistoryAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobRunResult> GetRunHistoryAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult> localVarResponse = await GetRunHistoryWithHttpInfoAsync(runId, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult> localVarResponse = await GetRunHistoryWithHttpInfoAsync(runId, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1498,8 +1650,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="runId">The unique ID of the run</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (JobRunResult)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult>> GetRunHistoryWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult>> GetRunHistoryWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'runId' is set
             if (runId == null)
@@ -1509,6 +1662,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1574,10 +1737,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="scope">The scope of the job</param>
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfScheduleDefinition</returns>
-        public ResourceListOfScheduleDefinition GetSchedulesForAJob(string scope, string code, int operationIndex = 0)
+        public ResourceListOfScheduleDefinition GetSchedulesForAJob(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> localVarResponse = GetSchedulesForAJobWithHttpInfo(scope, code);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> localVarResponse = GetSchedulesForAJobWithHttpInfo(scope, code, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1588,8 +1752,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="scope">The scope of the job</param>
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfScheduleDefinition</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> GetSchedulesForAJobWithHttpInfo(string scope, string code, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> GetSchedulesForAJobWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1604,6 +1769,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1670,10 +1845,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfScheduleDefinition</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> GetSchedulesForAJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> GetSchedulesForAJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> localVarResponse = await GetSchedulesForAJobWithHttpInfoAsync(scope, code, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> localVarResponse = await GetSchedulesForAJobWithHttpInfoAsync(scope, code, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1685,8 +1861,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfScheduleDefinition)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition>> GetSchedulesForAJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition>> GetSchedulesForAJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -1702,6 +1879,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1771,10 +1958,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfJobDefinition</returns>
-        public ResourceListOfJobDefinition ListJobs(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public ResourceListOfJobDefinition ListJobs(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobDefinition> localVarResponse = ListJobsWithHttpInfo(page, sortBy, start, limit, filter);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobDefinition> localVarResponse = ListJobsWithHttpInfo(page, sortBy, start, limit, filter, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1788,10 +1976,21 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="limit">When paginating, limit the number of returned results to this many. Defaults to 2000 if not specified. Maximum is 5000. (optional, default to 2000)</param>
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfJobDefinition</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobDefinition> ListJobsWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobDefinition> ListJobsWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1879,10 +2078,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfJobDefinition</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfJobDefinition> ListJobsAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<ResourceListOfJobDefinition> ListJobsAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobDefinition> localVarResponse = await ListJobsWithHttpInfoAsync(page, sortBy, start, limit, filter, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobDefinition> localVarResponse = await ListJobsWithHttpInfoAsync(page, sortBy, start, limit, filter, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1897,11 +2097,22 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="filter">Expression to filter the result set. (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfJobDefinition)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobDefinition>> ListJobsWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobDefinition>> ListJobsWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
             };
@@ -1987,10 +2198,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="startJobRequest">The request for starting job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>StartJobResponse</returns>
-        public StartJobResponse RunJob(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0)
+        public StartJobResponse RunJob(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse> localVarResponse = RunJobWithHttpInfo(scope, code, startJobRequest);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse> localVarResponse = RunJobWithHttpInfo(scope, code, startJobRequest, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -2002,8 +2214,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code">The code of the job</param>
         /// <param name="startJobRequest">The request for starting job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of StartJobResponse</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse> RunJobWithHttpInfo(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse> RunJobWithHttpInfo(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -2024,6 +2237,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -2096,10 +2319,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="startJobRequest">The request for starting job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of StartJobResponse</returns>
-        public async System.Threading.Tasks.Task<StartJobResponse> RunJobAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<StartJobResponse> RunJobAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse> localVarResponse = await RunJobWithHttpInfoAsync(scope, code, startJobRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse> localVarResponse = await RunJobWithHttpInfoAsync(scope, code, startJobRequest, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2112,8 +2336,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="startJobRequest">The request for starting job</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (StartJobResponse)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse>> RunJobWithHttpInfoAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse>> RunJobWithHttpInfoAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -2135,6 +2360,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 
@@ -2207,10 +2442,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code"></param>
         /// <param name="updateJobRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>JobDefinition</returns>
-        public JobDefinition UpdateJob(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0)
+        public JobDefinition UpdateJob(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> localVarResponse = UpdateJobWithHttpInfo(scope, code, updateJobRequest);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> localVarResponse = UpdateJobWithHttpInfo(scope, code, updateJobRequest, opts: opts);
             return localVarResponse.Data;
         }
 
@@ -2222,8 +2458,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="code"></param>
         /// <param name="updateJobRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of JobDefinition</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> UpdateJobWithHttpInfo(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> UpdateJobWithHttpInfo(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -2244,6 +2481,16 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json",
@@ -2316,10 +2563,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="updateJobRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of JobDefinition</returns>
-        public async System.Threading.Tasks.Task<JobDefinition> UpdateJobAsync(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<JobDefinition> UpdateJobAsync(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> localVarResponse = await UpdateJobWithHttpInfoAsync(scope, code, updateJobRequest, operationIndex, cancellationToken).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> localVarResponse = await UpdateJobWithHttpInfoAsync(scope, code, updateJobRequest, operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -2332,8 +2580,9 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="updateJobRequest"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
+        /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (JobDefinition)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition>> UpdateJobWithHttpInfoAsync(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition>> UpdateJobWithHttpInfoAsync(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
             // verify the required parameter 'scope' is set
             if (scope == null)
@@ -2355,6 +2604,16 @@ namespace Finbourne.Scheduler.Sdk.Api
 
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
+
+            if (opts is { TimeoutMs: not null })
+            {
+                localVarRequestOptions.TimeoutMs = opts.TimeoutMs.Value;
+            }
+            
+            if (opts is { RateLimitRetries: not null })
+            {
+                localVarRequestOptions.RateLimitRetries = opts.RateLimitRetries.Value;
+            }
 
             string[] _contentTypes = new string[] {
                 "application/json-patch+json", 

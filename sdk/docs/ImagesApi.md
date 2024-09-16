@@ -47,11 +47,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ImagesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ImagesApi>();
             var name = "name_example";  // string | The name and tag of the image. Format \"ExampleImageName:0.1\"
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // string result = apiInstance.DeleteImage(name, opts: opts);
+
                 // [EXPERIMENTAL] DeleteImage: Delete a Docker Image
                 string result = apiInstance.DeleteImage(name);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -149,11 +160,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ImagesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ImagesApi>();
             var name = "name_example";  // string | The name and tag of the image of the image. Format \"ExampleImageName:latest\"
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // System.IO.Stream result = apiInstance.DownloadImage(name, opts: opts);
+
                 // [EXPERIMENTAL] DownloadImage: Download Docker Image
                 System.IO.Stream result = apiInstance.DownloadImage(name);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -250,11 +272,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ImagesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ImagesApi>();
             var name = "name_example";  // string | The name and tag of a Docker image. Format \"ExampleImageName:latest\"
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // Image result = apiInstance.GetImage(name, opts: opts);
+
                 // [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
                 Image result = apiInstance.GetImage(name);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -351,6 +384,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ImagesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ImagesApi>();
             var name = "name_example";  // string | The name of the Repository
             var page = "page_example";  // string? | The pagination token to use to continue listing images from a previous call to list images.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional) 
@@ -361,6 +402,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfImageSummary result = apiInstance.ListImages(name, page, sortBy, start, limit, filter, opts: opts);
+
                 // [EXPERIMENTAL] ListImages: List all images under same image repository
                 ResourceListOfImageSummary result = apiInstance.ListImages(name, page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -462,6 +506,14 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ImagesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ImagesApi>();
             var page = "page_example";  // string? | The pagination token to use to continue listing images from a previous call to list images.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional) 
             var sortBy = new List<string>?(); // List<string>? | Order the results by these fields. Use use the '-' sign to denote descending order e.g. -MyFieldName. (optional) 
@@ -471,6 +523,9 @@ namespace Examples
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfRepository result = apiInstance.ListRepositories(page, sortBy, start, limit, filter, opts: opts);
+
                 // [EXPERIMENTAL] ListRepositories: List all Docker image repositories
                 ResourceListOfRepository result = apiInstance.ListRepositories(page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
@@ -573,11 +628,22 @@ namespace Examples
                         ""clientSecret"": ""<your-client-secret>""
                     }
                 }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<ImagesApi>();
+
             var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<ImagesApi>();
             var uploadImageRequest = new UploadImageRequest(); // UploadImageRequest | Request to upload image
 
             try
             {
+                // uncomment the below to set overrides at the request level
+                // UploadImageInstructions result = apiInstance.UploadImage(uploadImageRequest, opts: opts);
+
                 // [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
                 UploadImageInstructions result = apiInstance.UploadImage(uploadImageRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
