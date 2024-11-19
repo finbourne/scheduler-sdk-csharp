@@ -490,6 +490,18 @@ namespace Finbourne.Scheduler.Sdk.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImageTag, length must be greater than 0.", new [] { "ImageTag" });
             }
 
+            // Ttl (int) maximum
+            if (this.Ttl > (int)18000)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Ttl, must be a value less than or equal to 18000.", new [] { "Ttl" });
+            }
+
+            // Ttl (int) minimum
+            if (this.Ttl < (int)0)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Ttl, must be a value greater than or equal to 0.", new [] { "Ttl" });
+            }
+
             // CommandLineArgumentSeparator (string) maxLength
             if (this.CommandLineArgumentSeparator != null && this.CommandLineArgumentSeparator.Length > 5)
             {
