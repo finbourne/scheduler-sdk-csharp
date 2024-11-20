@@ -17,7 +17,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mime;
-using Finbourne.Scheduler.Sdk.Client;
+using IApiAccessor = Finbourne.Scheduler.Sdk.Client.IApiAccessor;
 using Finbourne.Scheduler.Sdk.Extensions;
 using Finbourne.Scheduler.Sdk.Client.Auth;
 using Finbourne.Scheduler.Sdk.Model;
@@ -52,7 +52,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ScheduleDefinition</returns>
-        ApiResponse<ScheduleDefinition> CreateScheduleWithHttpInfo(CreateScheduleRequest createScheduleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition> CreateScheduleWithHttpInfo(CreateScheduleRequest createScheduleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule
         /// </summary>
@@ -76,7 +76,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteScheduleWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Scheduler.Sdk.Client.ApiResponse<Object> DeleteScheduleWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
         /// </summary>
@@ -102,7 +102,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ScheduleDefinition</returns>
-        ApiResponse<ScheduleDefinition> EnabledScheduleWithHttpInfo(string scope, string code, bool enable, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition> EnabledScheduleWithHttpInfo(string scope, string code, bool enable, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetSchedule: Get a single Schedule
         /// </summary>
@@ -126,7 +126,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ScheduleDefinition</returns>
-        ApiResponse<ScheduleDefinition> GetScheduleWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition> GetScheduleWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListSchedules: List the available Schedules
         /// </summary>
@@ -156,7 +156,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfScheduleDefinition</returns>
-        ApiResponse<ResourceListOfScheduleDefinition> ListSchedulesWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> ListSchedulesWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately
         /// </summary>
@@ -180,7 +180,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of StartScheduleResponse</returns>
-        ApiResponse<StartScheduleResponse> RunScheduleWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Scheduler.Sdk.Client.ApiResponse<StartScheduleResponse> RunScheduleWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdateSchedule: Update a schedule.
         /// </summary>
@@ -206,7 +206,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ScheduleDefinition</returns>
-        ApiResponse<ScheduleDefinition> UpdateScheduleWithHttpInfo(string scope, string code, UpdateScheduleRequest updateScheduleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition> UpdateScheduleWithHttpInfo(string scope, string code, UpdateScheduleRequest updateScheduleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         #endregion Synchronous Operations
     }
 
@@ -242,7 +242,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ScheduleDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleDefinition>> CreateScheduleWithHttpInfoAsync(CreateScheduleRequest createScheduleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition>> CreateScheduleWithHttpInfoAsync(CreateScheduleRequest createScheduleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule
         /// </summary>
@@ -271,7 +271,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteScheduleWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<Object>> DeleteScheduleWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
         /// </summary>
@@ -302,7 +302,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ScheduleDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleDefinition>> EnabledScheduleWithHttpInfoAsync(string scope, string code, bool enable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition>> EnabledScheduleWithHttpInfoAsync(string scope, string code, bool enable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] GetSchedule: Get a single Schedule
         /// </summary>
@@ -331,7 +331,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ScheduleDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleDefinition>> GetScheduleWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition>> GetScheduleWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] ListSchedules: List the available Schedules
         /// </summary>
@@ -366,7 +366,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfScheduleDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResourceListOfScheduleDefinition>> ListSchedulesWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition>> ListSchedulesWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately
         /// </summary>
@@ -395,7 +395,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (StartScheduleResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StartScheduleResponse>> RunScheduleWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<StartScheduleResponse>> RunScheduleWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// [EXPERIMENTAL] UpdateSchedule: Update a schedule.
         /// </summary>
@@ -426,7 +426,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ScheduleDefinition)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleDefinition>> UpdateScheduleWithHttpInfoAsync(string scope, string code, UpdateScheduleRequest updateScheduleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition>> UpdateScheduleWithHttpInfoAsync(string scope, string code, UpdateScheduleRequest updateScheduleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         #endregion Asynchronous Operations
     }
 
