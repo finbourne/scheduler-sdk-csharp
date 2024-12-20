@@ -32,11 +32,11 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// Initializes a new instance of the <see cref="TimeTrigger" /> class.
         /// </summary>
         /// <param name="expression">Cron expression.</param>
-        /// <param name="timeZone">Time zone of the Cron expression. If not provided, defaults to UTC.</param>
-        public TimeTrigger(string expression = default(string), string timeZone = default(string))
+        /// <param name="varTimeZone">Time zone of the Cron expression. If not provided, defaults to UTC.</param>
+        public TimeTrigger(string expression = default(string), string varTimeZone = default(string))
         {
             this.Expression = expression;
-            this.TimeZone = timeZone;
+            this.VarTimeZone = varTimeZone;
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// </summary>
         /// <value>Time zone of the Cron expression. If not provided, defaults to UTC</value>
         [DataMember(Name = "timeZone", EmitDefaultValue = true)]
-        public string TimeZone { get; set; }
+        public string VarTimeZone { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -62,7 +62,7 @@ namespace Finbourne.Scheduler.Sdk.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class TimeTrigger {\n");
             sb.Append("  Expression: ").Append(Expression).Append("\n");
-            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
+            sb.Append("  VarTimeZone: ").Append(VarTimeZone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,9 +104,9 @@ namespace Finbourne.Scheduler.Sdk.Model
                     this.Expression.Equals(input.Expression))
                 ) && 
                 (
-                    this.TimeZone == input.TimeZone ||
-                    (this.TimeZone != null &&
-                    this.TimeZone.Equals(input.TimeZone))
+                    this.VarTimeZone == input.VarTimeZone ||
+                    (this.VarTimeZone != null &&
+                    this.VarTimeZone.Equals(input.VarTimeZone))
                 );
         }
 
@@ -123,9 +123,9 @@ namespace Finbourne.Scheduler.Sdk.Model
                 {
                     hashCode = (hashCode * 59) + this.Expression.GetHashCode();
                 }
-                if (this.TimeZone != null)
+                if (this.VarTimeZone != null)
                 {
-                    hashCode = (hashCode * 59) + this.TimeZone.GetHashCode();
+                    hashCode = (hashCode * 59) + this.VarTimeZone.GetHashCode();
                 }
                 return hashCode;
             }
@@ -150,16 +150,16 @@ namespace Finbourne.Scheduler.Sdk.Model
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Expression, length must be greater than 1.", new [] { "Expression" });
             }
 
-            // TimeZone (string) maxLength
-            if (this.TimeZone != null && this.TimeZone.Length > 100)
+            // VarTimeZone (string) maxLength
+            if (this.VarTimeZone != null && this.VarTimeZone.Length > 100)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TimeZone, length must be less than 100.", new [] { "TimeZone" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for VarTimeZone, length must be less than 100.", new [] { "VarTimeZone" });
             }
 
-            // TimeZone (string) minLength
-            if (this.TimeZone != null && this.TimeZone.Length < 1)
+            // VarTimeZone (string) minLength
+            if (this.VarTimeZone != null && this.VarTimeZone.Length < 1)
             {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for TimeZone, length must be greater than 1.", new [] { "TimeZone" });
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for VarTimeZone, length must be greater than 1.", new [] { "VarTimeZone" });
             }
 
             yield break;
