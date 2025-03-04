@@ -32,7 +32,7 @@ namespace Finbourne.Scheduler.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image
+        /// DeleteImage: Delete a Docker Image
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
@@ -42,7 +42,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         string DeleteImage(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image
+        /// DeleteImage: Delete a Docker Image
         /// </summary>
         /// <remarks>
         /// 
@@ -54,7 +54,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of string</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<string> DeleteImageWithHttpInfo(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] DownloadImage: Download Docker Image
+        /// DownloadImage: Download Docker Image
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -64,7 +64,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.IO.Stream DownloadImage(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DownloadImage: Download Docker Image
+        /// DownloadImage: Download Docker Image
         /// </summary>
         /// <remarks>
         /// 
@@ -76,7 +76,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream> DownloadImageWithHttpInfo(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
+        /// GetImage: Get metadata of a Docker Image
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -86,7 +86,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         Image GetImage(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
+        /// GetImage: Get metadata of a Docker Image
         /// </summary>
         /// <remarks>
         /// 
@@ -98,7 +98,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of Image</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<Image> GetImageWithHttpInfo(string name, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListImages: List all images under same image repository
+        /// ListImages: List all images under same image repository
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the Repository</param>
@@ -113,7 +113,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ResourceListOfImageSummary ListImages(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListImages: List all images under same image repository
+        /// ListImages: List all images under same image repository
         /// </summary>
         /// <remarks>
         /// 
@@ -130,7 +130,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfImageSummary</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary> ListImagesWithHttpInfo(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories
+        /// ListRepositories: List all Docker image repositories
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing images from a previous call to list images.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -144,7 +144,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ResourceListOfRepository ListRepositories(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories
+        /// ListRepositories: List all Docker image repositories
         /// </summary>
         /// <remarks>
         /// 
@@ -160,7 +160,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfRepository</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository> ListRepositoriesWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
+        /// UploadImage: Upload a Docker Image used for Scheduler jobs
         /// </summary>
         /// <remarks>
         /// Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
@@ -173,7 +173,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         UploadImageInstructions UploadImage(UploadImageRequest uploadImageRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
+        /// UploadImage: Upload a Docker Image used for Scheduler jobs
         /// </summary>
         /// <remarks>
         /// Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
@@ -194,7 +194,7 @@ namespace Finbourne.Scheduler.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image
+        /// DeleteImage: Delete a Docker Image
         /// </summary>
         /// <remarks>
         /// 
@@ -208,7 +208,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<string> DeleteImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image
+        /// DeleteImage: Delete a Docker Image
         /// </summary>
         /// <remarks>
         /// 
@@ -221,7 +221,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<string>> DeleteImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] DownloadImage: Download Docker Image
+        /// DownloadImage: Download Docker Image
         /// </summary>
         /// <remarks>
         /// 
@@ -235,7 +235,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<System.IO.Stream> DownloadImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DownloadImage: Download Docker Image
+        /// DownloadImage: Download Docker Image
         /// </summary>
         /// <remarks>
         /// 
@@ -248,7 +248,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<System.IO.Stream>> DownloadImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
+        /// GetImage: Get metadata of a Docker Image
         /// </summary>
         /// <remarks>
         /// 
@@ -262,7 +262,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<Image> GetImageAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
+        /// GetImage: Get metadata of a Docker Image
         /// </summary>
         /// <remarks>
         /// 
@@ -275,7 +275,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (Image)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<Image>> GetImageWithHttpInfoAsync(string name, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListImages: List all images under same image repository
+        /// ListImages: List all images under same image repository
         /// </summary>
         /// <remarks>
         /// 
@@ -294,7 +294,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfImageSummary> ListImagesAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListImages: List all images under same image repository
+        /// ListImages: List all images under same image repository
         /// </summary>
         /// <remarks>
         /// 
@@ -312,7 +312,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfImageSummary)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfImageSummary>> ListImagesWithHttpInfoAsync(string name, string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories
+        /// ListRepositories: List all Docker image repositories
         /// </summary>
         /// <remarks>
         /// 
@@ -330,7 +330,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfRepository> ListRepositoriesAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories
+        /// ListRepositories: List all Docker image repositories
         /// </summary>
         /// <remarks>
         /// 
@@ -347,7 +347,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfRepository)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfRepository>> ListRepositoriesWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
+        /// UploadImage: Upload a Docker Image used for Scheduler jobs
         /// </summary>
         /// <remarks>
         /// Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
@@ -361,7 +361,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<UploadImageInstructions> UploadImageAsync(UploadImageRequest uploadImageRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
+        /// UploadImage: Upload a Docker Image used for Scheduler jobs
         /// </summary>
         /// <remarks>
         /// Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
@@ -497,7 +497,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image 
+        /// DeleteImage: Delete a Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
@@ -511,7 +511,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image 
+        /// DeleteImage: Delete a Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
@@ -595,7 +595,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image 
+        /// DeleteImage: Delete a Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
@@ -610,7 +610,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteImage: Delete a Docker Image 
+        /// DeleteImage: Delete a Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image. Format \&quot;ExampleImageName:0.1\&quot;</param>
@@ -697,7 +697,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DownloadImage: Download Docker Image 
+        /// DownloadImage: Download Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -711,7 +711,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DownloadImage: Download Docker Image 
+        /// DownloadImage: Download Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -795,7 +795,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DownloadImage: Download Docker Image 
+        /// DownloadImage: Download Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -810,7 +810,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DownloadImage: Download Docker Image 
+        /// DownloadImage: Download Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of the image of the image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -897,7 +897,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image 
+        /// GetImage: Get metadata of a Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -911,7 +911,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image 
+        /// GetImage: Get metadata of a Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -995,7 +995,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image 
+        /// GetImage: Get metadata of a Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -1010,7 +1010,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetImage: Get metadata of a Docker Image 
+        /// GetImage: Get metadata of a Docker Image 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name and tag of a Docker image. Format \&quot;ExampleImageName:latest\&quot;</param>
@@ -1097,7 +1097,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListImages: List all images under same image repository 
+        /// ListImages: List all images under same image repository 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the Repository</param>
@@ -1116,7 +1116,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListImages: List all images under same image repository 
+        /// ListImages: List all images under same image repository 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the Repository</param>
@@ -1225,7 +1225,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListImages: List all images under same image repository 
+        /// ListImages: List all images under same image repository 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the Repository</param>
@@ -1245,7 +1245,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListImages: List all images under same image repository 
+        /// ListImages: List all images under same image repository 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The name of the Repository</param>
@@ -1357,7 +1357,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories 
+        /// ListRepositories: List all Docker image repositories 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing images from a previous call to list images.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1375,7 +1375,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories 
+        /// ListRepositories: List all Docker image repositories 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing images from a previous call to list images.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1476,7 +1476,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories 
+        /// ListRepositories: List all Docker image repositories 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing images from a previous call to list images.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1495,7 +1495,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListRepositories: List all Docker image repositories 
+        /// ListRepositories: List all Docker image repositories 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing images from a previous call to list images.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1599,7 +1599,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
+        /// UploadImage: Upload a Docker Image used for Scheduler jobs Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uploadImageRequest">Request to upload image</param>
@@ -1613,7 +1613,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
+        /// UploadImage: Upload a Docker Image used for Scheduler jobs Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uploadImageRequest">Request to upload image</param>
@@ -1701,7 +1701,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
+        /// UploadImage: Upload a Docker Image used for Scheduler jobs Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uploadImageRequest">Request to upload image</param>
@@ -1716,7 +1716,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
+        /// UploadImage: Upload a Docker Image used for Scheduler jobs Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uploadImageRequest">Request to upload image</param>

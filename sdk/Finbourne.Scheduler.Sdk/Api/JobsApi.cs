@@ -32,7 +32,7 @@ namespace Finbourne.Scheduler.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] CreateJob: Create a new job
+        /// CreateJob: Create a new job
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createJobRequest">The request to create a new job</param>
@@ -42,7 +42,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         JobDefinition CreateJob(CreateJobRequest createJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateJob: Create a new job
+        /// CreateJob: Create a new job
         /// </summary>
         /// <remarks>
         /// 
@@ -54,7 +54,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of JobDefinition</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition> CreateJobWithHttpInfo(CreateJobRequest createJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] DeleteJob: Delete a job
+        /// DeleteJob: Delete a job
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -65,7 +65,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ResourceListOfScheduleDefinition DeleteJob(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteJob: Delete a job
+        /// DeleteJob: Delete a job
         /// </summary>
         /// <remarks>
         /// 
@@ -78,7 +78,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfScheduleDefinition</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> DeleteJobWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetHistory: Get the history of job runs
+        /// GetHistory: Get the history of job runs
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -92,7 +92,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ResourceListOfJobHistory GetHistory(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetHistory: Get the history of job runs
+        /// GetHistory: Get the history of job runs
         /// </summary>
         /// <remarks>
         /// 
@@ -108,7 +108,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfJobHistory</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory> GetHistoryWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
+        /// GetJobConsoleOutput: Gets the console output of a specific job run
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The RunId of the job run</param>
@@ -118,7 +118,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         string GetJobConsoleOutput(string runId, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
+        /// GetJobConsoleOutput: Gets the console output of a specific job run
         /// </summary>
         /// <remarks>
         /// 
@@ -130,7 +130,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of string</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<string> GetJobConsoleOutputWithHttpInfo(string runId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
+        /// GetRunHistory: Get the history for a single job run
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The unique ID of the run</param>
@@ -140,7 +140,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         JobRunResult GetRunHistory(string runId, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
+        /// GetRunHistory: Get the history for a single job run
         /// </summary>
         /// <remarks>
         /// 
@@ -152,7 +152,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of JobRunResult</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult> GetRunHistoryWithHttpInfo(string runId, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
+        /// GetSchedulesForAJob: Get all the schedules for a single job
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -163,7 +163,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ResourceListOfScheduleDefinition GetSchedulesForAJob(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
+        /// GetSchedulesForAJob: Get all the schedules for a single job
         /// </summary>
         /// <remarks>
         /// 
@@ -176,7 +176,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfScheduleDefinition</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> GetSchedulesForAJobWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListJobs: List the available jobs
+        /// ListJobs: List the available jobs
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -190,7 +190,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ResourceListOfJobDefinition ListJobs(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListJobs: List the available jobs
+        /// ListJobs: List the available jobs
         /// </summary>
         /// <remarks>
         /// 
@@ -232,7 +232,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of StartJobResponse</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse> RunJobWithHttpInfo(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition
+        /// UpdateJob: Update a JobDefinition
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope"></param>
@@ -244,7 +244,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         JobDefinition UpdateJob(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition
+        /// UpdateJob: Update a JobDefinition
         /// </summary>
         /// <remarks>
         /// 
@@ -267,7 +267,7 @@ namespace Finbourne.Scheduler.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] CreateJob: Create a new job
+        /// CreateJob: Create a new job
         /// </summary>
         /// <remarks>
         /// 
@@ -281,7 +281,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<JobDefinition> CreateJobAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateJob: Create a new job
+        /// CreateJob: Create a new job
         /// </summary>
         /// <remarks>
         /// 
@@ -294,7 +294,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (JobDefinition)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<JobDefinition>> CreateJobWithHttpInfoAsync(CreateJobRequest createJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] DeleteJob: Delete a job
+        /// DeleteJob: Delete a job
         /// </summary>
         /// <remarks>
         /// 
@@ -309,7 +309,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> DeleteJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteJob: Delete a job
+        /// DeleteJob: Delete a job
         /// </summary>
         /// <remarks>
         /// 
@@ -323,7 +323,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfScheduleDefinition)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition>> DeleteJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetHistory: Get the history of job runs
+        /// GetHistory: Get the history of job runs
         /// </summary>
         /// <remarks>
         /// 
@@ -341,7 +341,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfJobHistory> GetHistoryAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetHistory: Get the history of job runs
+        /// GetHistory: Get the history of job runs
         /// </summary>
         /// <remarks>
         /// 
@@ -358,7 +358,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfJobHistory)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfJobHistory>> GetHistoryWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
+        /// GetJobConsoleOutput: Gets the console output of a specific job run
         /// </summary>
         /// <remarks>
         /// 
@@ -372,7 +372,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<string> GetJobConsoleOutputAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
+        /// GetJobConsoleOutput: Gets the console output of a specific job run
         /// </summary>
         /// <remarks>
         /// 
@@ -385,7 +385,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<string>> GetJobConsoleOutputWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
+        /// GetRunHistory: Get the history for a single job run
         /// </summary>
         /// <remarks>
         /// 
@@ -399,7 +399,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<JobRunResult> GetRunHistoryAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
+        /// GetRunHistory: Get the history for a single job run
         /// </summary>
         /// <remarks>
         /// 
@@ -412,7 +412,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (JobRunResult)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<JobRunResult>> GetRunHistoryWithHttpInfoAsync(string runId, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
+        /// GetSchedulesForAJob: Get all the schedules for a single job
         /// </summary>
         /// <remarks>
         /// 
@@ -427,7 +427,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> GetSchedulesForAJobAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
+        /// GetSchedulesForAJob: Get all the schedules for a single job
         /// </summary>
         /// <remarks>
         /// 
@@ -441,7 +441,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfScheduleDefinition)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition>> GetSchedulesForAJobWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListJobs: List the available jobs
+        /// ListJobs: List the available jobs
         /// </summary>
         /// <remarks>
         /// 
@@ -459,7 +459,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfJobDefinition> ListJobsAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListJobs: List the available jobs
+        /// ListJobs: List the available jobs
         /// </summary>
         /// <remarks>
         /// 
@@ -507,7 +507,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (StartJobResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<StartJobResponse>> RunJobWithHttpInfoAsync(string scope, string code, StartJobRequest startJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition
+        /// UpdateJob: Update a JobDefinition
         /// </summary>
         /// <remarks>
         /// 
@@ -523,7 +523,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<JobDefinition> UpdateJobAsync(string scope, string code, UpdateJobRequest updateJobRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition
+        /// UpdateJob: Update a JobDefinition
         /// </summary>
         /// <remarks>
         /// 
@@ -661,7 +661,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateJob: Create a new job 
+        /// CreateJob: Create a new job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createJobRequest">The request to create a new job</param>
@@ -675,7 +675,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateJob: Create a new job 
+        /// CreateJob: Create a new job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createJobRequest">The request to create a new job</param>
@@ -763,7 +763,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateJob: Create a new job 
+        /// CreateJob: Create a new job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createJobRequest">The request to create a new job</param>
@@ -778,7 +778,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateJob: Create a new job 
+        /// CreateJob: Create a new job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createJobRequest">The request to create a new job</param>
@@ -869,7 +869,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteJob: Delete a job 
+        /// DeleteJob: Delete a job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -884,7 +884,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteJob: Delete a job 
+        /// DeleteJob: Delete a job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -976,7 +976,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteJob: Delete a job 
+        /// DeleteJob: Delete a job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -992,7 +992,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteJob: Delete a job 
+        /// DeleteJob: Delete a job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -1087,7 +1087,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetHistory: Get the history of job runs 
+        /// GetHistory: Get the history of job runs 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1105,7 +1105,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetHistory: Get the history of job runs 
+        /// GetHistory: Get the history of job runs 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1206,7 +1206,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetHistory: Get the history of job runs 
+        /// GetHistory: Get the history of job runs 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1225,7 +1225,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetHistory: Get the history of job runs 
+        /// GetHistory: Get the history of job runs 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1329,7 +1329,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run 
+        /// GetJobConsoleOutput: Gets the console output of a specific job run 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The RunId of the job run</param>
@@ -1343,7 +1343,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run 
+        /// GetJobConsoleOutput: Gets the console output of a specific job run 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The RunId of the job run</param>
@@ -1428,7 +1428,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run 
+        /// GetJobConsoleOutput: Gets the console output of a specific job run 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The RunId of the job run</param>
@@ -1443,7 +1443,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run 
+        /// GetJobConsoleOutput: Gets the console output of a specific job run 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The RunId of the job run</param>
@@ -1531,7 +1531,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run 
+        /// GetRunHistory: Get the history for a single job run 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The unique ID of the run</param>
@@ -1545,7 +1545,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run 
+        /// GetRunHistory: Get the history for a single job run 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The unique ID of the run</param>
@@ -1629,7 +1629,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run 
+        /// GetRunHistory: Get the history for a single job run 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The unique ID of the run</param>
@@ -1644,7 +1644,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetRunHistory: Get the history for a single job run 
+        /// GetRunHistory: Get the history for a single job run 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="runId">The unique ID of the run</param>
@@ -1731,7 +1731,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job 
+        /// GetSchedulesForAJob: Get all the schedules for a single job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -1746,7 +1746,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job 
+        /// GetSchedulesForAJob: Get all the schedules for a single job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -1838,7 +1838,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job 
+        /// GetSchedulesForAJob: Get all the schedules for a single job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -1854,7 +1854,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job 
+        /// GetSchedulesForAJob: Get all the schedules for a single job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of the job</param>
@@ -1949,7 +1949,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListJobs: List the available jobs 
+        /// ListJobs: List the available jobs 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1967,7 +1967,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListJobs: List the available jobs 
+        /// ListJobs: List the available jobs 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -2068,7 +2068,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListJobs: List the available jobs 
+        /// ListJobs: List the available jobs 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -2087,7 +2087,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListJobs: List the available jobs 
+        /// ListJobs: List the available jobs 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -2435,7 +2435,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition 
+        /// UpdateJob: Update a JobDefinition 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope"></param>
@@ -2451,7 +2451,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition 
+        /// UpdateJob: Update a JobDefinition 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope"></param>
@@ -2555,7 +2555,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition 
+        /// UpdateJob: Update a JobDefinition 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope"></param>
@@ -2572,7 +2572,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateJob: Update a JobDefinition 
+        /// UpdateJob: Update a JobDefinition 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope"></param>

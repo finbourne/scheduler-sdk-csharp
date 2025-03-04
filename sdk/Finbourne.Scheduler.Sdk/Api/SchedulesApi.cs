@@ -32,7 +32,7 @@ namespace Finbourne.Scheduler.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job
+        /// CreateSchedule: Create a Schedule for a job
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createScheduleRequest"></param>
@@ -42,7 +42,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ScheduleDefinition CreateSchedule(CreateScheduleRequest createScheduleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job
+        /// CreateSchedule: Create a Schedule for a job
         /// </summary>
         /// <remarks>
         /// 
@@ -54,7 +54,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ScheduleDefinition</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition> CreateScheduleWithHttpInfo(CreateScheduleRequest createScheduleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule
+        /// DeleteSchedule: Delete a schedule
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be deleted</param>
@@ -65,7 +65,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         void DeleteSchedule(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule
+        /// DeleteSchedule: Delete a schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -78,7 +78,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of Object(void)</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<Object> DeleteScheduleWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
+        /// EnabledSchedule: Enable/disable a schedule
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be enabled/disabled</param>
@@ -90,7 +90,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ScheduleDefinition EnabledSchedule(string scope, string code, bool enable, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
+        /// EnabledSchedule: Enable/disable a schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -104,7 +104,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ScheduleDefinition</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition> EnabledScheduleWithHttpInfo(string scope, string code, bool enable, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedule: Get a single Schedule
+        /// GetSchedule: Get a single Schedule
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of Schedule</param>
@@ -115,7 +115,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ScheduleDefinition GetSchedule(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedule: Get a single Schedule
+        /// GetSchedule: Get a single Schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -128,7 +128,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ScheduleDefinition</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition> GetScheduleWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListSchedules: List the available Schedules
+        /// ListSchedules: List the available Schedules
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -142,7 +142,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ResourceListOfScheduleDefinition ListSchedules(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListSchedules: List the available Schedules
+        /// ListSchedules: List the available Schedules
         /// </summary>
         /// <remarks>
         /// 
@@ -158,7 +158,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of ResourceListOfScheduleDefinition</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition> ListSchedulesWithHttpInfo(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately
+        /// RunSchedule: Run a schedule immediately
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The schedule scope</param>
@@ -169,7 +169,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         StartScheduleResponse RunSchedule(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately
+        /// RunSchedule: Run a schedule immediately
         /// </summary>
         /// <remarks>
         /// 
@@ -182,7 +182,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>ApiResponse of StartScheduleResponse</returns>
         Finbourne.Scheduler.Sdk.Client.ApiResponse<StartScheduleResponse> RunScheduleWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdateSchedule: Update a schedule.
+        /// UpdateSchedule: Update a schedule.
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be updated</param>
@@ -194,7 +194,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ScheduleDefinition UpdateSchedule(string scope, string code, UpdateScheduleRequest updateScheduleRequest, int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateSchedule: Update a schedule.
+        /// UpdateSchedule: Update a schedule.
         /// </summary>
         /// <remarks>
         /// 
@@ -217,7 +217,7 @@ namespace Finbourne.Scheduler.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job
+        /// CreateSchedule: Create a Schedule for a job
         /// </summary>
         /// <remarks>
         /// 
@@ -231,7 +231,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ScheduleDefinition> CreateScheduleAsync(CreateScheduleRequest createScheduleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job
+        /// CreateSchedule: Create a Schedule for a job
         /// </summary>
         /// <remarks>
         /// 
@@ -244,7 +244,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ScheduleDefinition)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition>> CreateScheduleWithHttpInfoAsync(CreateScheduleRequest createScheduleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule
+        /// DeleteSchedule: Delete a schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -259,7 +259,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task DeleteScheduleAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule
+        /// DeleteSchedule: Delete a schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -273,7 +273,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<Object>> DeleteScheduleWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
+        /// EnabledSchedule: Enable/disable a schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -289,7 +289,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ScheduleDefinition> EnabledScheduleAsync(string scope, string code, bool enable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
+        /// EnabledSchedule: Enable/disable a schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -304,7 +304,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ScheduleDefinition)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition>> EnabledScheduleWithHttpInfoAsync(string scope, string code, bool enable, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedule: Get a single Schedule
+        /// GetSchedule: Get a single Schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -319,7 +319,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ScheduleDefinition> GetScheduleAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedule: Get a single Schedule
+        /// GetSchedule: Get a single Schedule
         /// </summary>
         /// <remarks>
         /// 
@@ -333,7 +333,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ScheduleDefinition)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ScheduleDefinition>> GetScheduleWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] ListSchedules: List the available Schedules
+        /// ListSchedules: List the available Schedules
         /// </summary>
         /// <remarks>
         /// 
@@ -351,7 +351,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfScheduleDefinition> ListSchedulesAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListSchedules: List the available Schedules
+        /// ListSchedules: List the available Schedules
         /// </summary>
         /// <remarks>
         /// 
@@ -368,7 +368,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (ResourceListOfScheduleDefinition)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfScheduleDefinition>> ListSchedulesWithHttpInfoAsync(string? page = default(string?), List<string>? sortBy = default(List<string>?), int? start = default(int?), int? limit = default(int?), string? filter = default(string?), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately
+        /// RunSchedule: Run a schedule immediately
         /// </summary>
         /// <remarks>
         /// 
@@ -383,7 +383,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<StartScheduleResponse> RunScheduleAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately
+        /// RunSchedule: Run a schedule immediately
         /// </summary>
         /// <remarks>
         /// 
@@ -397,7 +397,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// <returns>Task of ApiResponse (StartScheduleResponse)</returns>
         System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<StartScheduleResponse>> RunScheduleWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
-        /// [EXPERIMENTAL] UpdateSchedule: Update a schedule.
+        /// UpdateSchedule: Update a schedule.
         /// </summary>
         /// <remarks>
         /// 
@@ -413,7 +413,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ScheduleDefinition> UpdateScheduleAsync(string scope, string code, UpdateScheduleRequest updateScheduleRequest, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateSchedule: Update a schedule.
+        /// UpdateSchedule: Update a schedule.
         /// </summary>
         /// <remarks>
         /// 
@@ -551,7 +551,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job 
+        /// CreateSchedule: Create a Schedule for a job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createScheduleRequest"></param>
@@ -565,7 +565,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job 
+        /// CreateSchedule: Create a Schedule for a job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createScheduleRequest"></param>
@@ -655,7 +655,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job 
+        /// CreateSchedule: Create a Schedule for a job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createScheduleRequest"></param>
@@ -670,7 +670,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job 
+        /// CreateSchedule: Create a Schedule for a job 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createScheduleRequest"></param>
@@ -763,7 +763,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule 
+        /// DeleteSchedule: Delete a schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be deleted</param>
@@ -777,7 +777,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule 
+        /// DeleteSchedule: Delete a schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be deleted</param>
@@ -871,7 +871,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule 
+        /// DeleteSchedule: Delete a schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be deleted</param>
@@ -886,7 +886,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] DeleteSchedule: Delete a schedule 
+        /// DeleteSchedule: Delete a schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be deleted</param>
@@ -983,7 +983,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule 
+        /// EnabledSchedule: Enable/disable a schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be enabled/disabled</param>
@@ -999,7 +999,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule 
+        /// EnabledSchedule: Enable/disable a schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be enabled/disabled</param>
@@ -1095,7 +1095,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule 
+        /// EnabledSchedule: Enable/disable a schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be enabled/disabled</param>
@@ -1112,7 +1112,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule 
+        /// EnabledSchedule: Enable/disable a schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be enabled/disabled</param>
@@ -1211,7 +1211,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedule: Get a single Schedule 
+        /// GetSchedule: Get a single Schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of Schedule</param>
@@ -1226,7 +1226,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedule: Get a single Schedule 
+        /// GetSchedule: Get a single Schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of Schedule</param>
@@ -1320,7 +1320,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedule: Get a single Schedule 
+        /// GetSchedule: Get a single Schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of Schedule</param>
@@ -1336,7 +1336,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] GetSchedule: Get a single Schedule 
+        /// GetSchedule: Get a single Schedule 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The scope of Schedule</param>
@@ -1433,7 +1433,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListSchedules: List the available Schedules 
+        /// ListSchedules: List the available Schedules 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1451,7 +1451,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListSchedules: List the available Schedules 
+        /// ListSchedules: List the available Schedules 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1554,7 +1554,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListSchedules: List the available Schedules 
+        /// ListSchedules: List the available Schedules 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1573,7 +1573,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListSchedules: List the available Schedules 
+        /// ListSchedules: List the available Schedules 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">The pagination token to use to continue listing instruments from a previous call to list instruments.              This value is returned from the previous call. If a pagination token is provided the sortBy and filter fields              must not have changed since the original request. Also, if set, a start value cannot be provided. (optional)</param>
@@ -1679,7 +1679,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately 
+        /// RunSchedule: Run a schedule immediately 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The schedule scope</param>
@@ -1694,7 +1694,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately 
+        /// RunSchedule: Run a schedule immediately 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The schedule scope</param>
@@ -1788,7 +1788,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately 
+        /// RunSchedule: Run a schedule immediately 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The schedule scope</param>
@@ -1804,7 +1804,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] RunSchedule: Run a schedule immediately 
+        /// RunSchedule: Run a schedule immediately 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">The schedule scope</param>
@@ -1901,7 +1901,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateSchedule: Update a schedule. 
+        /// UpdateSchedule: Update a schedule. 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be updated</param>
@@ -1917,7 +1917,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateSchedule: Update a schedule. 
+        /// UpdateSchedule: Update a schedule. 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be updated</param>
@@ -2023,7 +2023,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateSchedule: Update a schedule. 
+        /// UpdateSchedule: Update a schedule. 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be updated</param>
@@ -2040,7 +2040,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] UpdateSchedule: Update a schedule. 
+        /// UpdateSchedule: Update a schedule. 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scope">Scope of the schedule to be updated</param>

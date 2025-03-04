@@ -4,18 +4,18 @@ All URIs are relative to *https://fbn-prd.lusid.com/scheduler2*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**DeleteImage**](ImagesApi.md#deleteimage) | **DELETE** /api/images/{name} | [EXPERIMENTAL] DeleteImage: Delete a Docker Image |
-| [**DownloadImage**](ImagesApi.md#downloadimage) | **GET** /api/images/{name}/contents | [EXPERIMENTAL] DownloadImage: Download Docker Image |
-| [**GetImage**](ImagesApi.md#getimage) | **GET** /api/images/{name} | [EXPERIMENTAL] GetImage: Get metadata of a Docker Image |
-| [**ListImages**](ImagesApi.md#listimages) | **GET** /api/images/repository/{name} | [EXPERIMENTAL] ListImages: List all images under same image repository |
-| [**ListRepositories**](ImagesApi.md#listrepositories) | **GET** /api/images/repository | [EXPERIMENTAL] ListRepositories: List all Docker image repositories |
-| [**UploadImage**](ImagesApi.md#uploadimage) | **POST** /api/images | [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs |
+| [**DeleteImage**](ImagesApi.md#deleteimage) | **DELETE** /api/images/{name} | DeleteImage: Delete a Docker Image |
+| [**DownloadImage**](ImagesApi.md#downloadimage) | **GET** /api/images/{name}/contents | DownloadImage: Download Docker Image |
+| [**GetImage**](ImagesApi.md#getimage) | **GET** /api/images/{name} | GetImage: Get metadata of a Docker Image |
+| [**ListImages**](ImagesApi.md#listimages) | **GET** /api/images/repository/{name} | ListImages: List all images under same image repository |
+| [**ListRepositories**](ImagesApi.md#listrepositories) | **GET** /api/images/repository | ListRepositories: List all Docker image repositories |
+| [**UploadImage**](ImagesApi.md#uploadimage) | **POST** /api/images | UploadImage: Upload a Docker Image used for Scheduler jobs |
 
 <a id="deleteimage"></a>
 # **DeleteImage**
 > string DeleteImage (string name)
 
-[EXPERIMENTAL] DeleteImage: Delete a Docker Image
+DeleteImage: Delete a Docker Image
 
 ### Example
 ```csharp
@@ -63,7 +63,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // string result = apiInstance.DeleteImage(name, opts: opts);
 
-                // [EXPERIMENTAL] DeleteImage: Delete a Docker Image
+                // DeleteImage: Delete a Docker Image
                 string result = apiInstance.DeleteImage(name);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -84,7 +84,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] DeleteImage: Delete a Docker Image
+    // DeleteImage: Delete a Docker Image
     ApiResponse<string> response = apiInstance.DeleteImageWithHttpInfo(name);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -128,7 +128,7 @@ catch (ApiException e)
 # **DownloadImage**
 > System.IO.Stream DownloadImage (string name)
 
-[EXPERIMENTAL] DownloadImage: Download Docker Image
+DownloadImage: Download Docker Image
 
 ### Example
 ```csharp
@@ -176,7 +176,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // System.IO.Stream result = apiInstance.DownloadImage(name, opts: opts);
 
-                // [EXPERIMENTAL] DownloadImage: Download Docker Image
+                // DownloadImage: Download Docker Image
                 System.IO.Stream result = apiInstance.DownloadImage(name);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -197,7 +197,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] DownloadImage: Download Docker Image
+    // DownloadImage: Download Docker Image
     ApiResponse<System.IO.Stream> response = apiInstance.DownloadImageWithHttpInfo(name);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -240,7 +240,7 @@ catch (ApiException e)
 # **GetImage**
 > Image GetImage (string name)
 
-[EXPERIMENTAL] GetImage: Get metadata of a Docker Image
+GetImage: Get metadata of a Docker Image
 
 ### Example
 ```csharp
@@ -288,7 +288,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // Image result = apiInstance.GetImage(name, opts: opts);
 
-                // [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
+                // GetImage: Get metadata of a Docker Image
                 Image result = apiInstance.GetImage(name);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -309,7 +309,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetImage: Get metadata of a Docker Image
+    // GetImage: Get metadata of a Docker Image
     ApiResponse<Image> response = apiInstance.GetImageWithHttpInfo(name);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -352,7 +352,7 @@ catch (ApiException e)
 # **ListImages**
 > ResourceListOfImageSummary ListImages (string name, string? page = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
 
-[EXPERIMENTAL] ListImages: List all images under same image repository
+ListImages: List all images under same image repository
 
 ### Example
 ```csharp
@@ -405,7 +405,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfImageSummary result = apiInstance.ListImages(name, page, sortBy, start, limit, filter, opts: opts);
 
-                // [EXPERIMENTAL] ListImages: List all images under same image repository
+                // ListImages: List all images under same image repository
                 ResourceListOfImageSummary result = apiInstance.ListImages(name, page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -426,7 +426,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListImages: List all images under same image repository
+    // ListImages: List all images under same image repository
     ApiResponse<ResourceListOfImageSummary> response = apiInstance.ListImagesWithHttpInfo(name, page, sortBy, start, limit, filter);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -474,7 +474,7 @@ catch (ApiException e)
 # **ListRepositories**
 > ResourceListOfRepository ListRepositories (string? page = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
 
-[EXPERIMENTAL] ListRepositories: List all Docker image repositories
+ListRepositories: List all Docker image repositories
 
 ### Example
 ```csharp
@@ -526,7 +526,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfRepository result = apiInstance.ListRepositories(page, sortBy, start, limit, filter, opts: opts);
 
-                // [EXPERIMENTAL] ListRepositories: List all Docker image repositories
+                // ListRepositories: List all Docker image repositories
                 ResourceListOfRepository result = apiInstance.ListRepositories(page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -547,7 +547,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListRepositories: List all Docker image repositories
+    // ListRepositories: List all Docker image repositories
     ApiResponse<ResourceListOfRepository> response = apiInstance.ListRepositoriesWithHttpInfo(page, sortBy, start, limit, filter);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -594,7 +594,7 @@ catch (ApiException e)
 # **UploadImage**
 > UploadImageInstructions UploadImage (UploadImageRequest uploadImageRequest)
 
-[EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
+UploadImage: Upload a Docker Image used for Scheduler jobs
 
 Every image must have at least one tag. Note: your image will not be available until the returned Docker commands are executed.
 
@@ -644,7 +644,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // UploadImageInstructions result = apiInstance.UploadImage(uploadImageRequest, opts: opts);
 
-                // [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
+                // UploadImage: Upload a Docker Image used for Scheduler jobs
                 UploadImageInstructions result = apiInstance.UploadImage(uploadImageRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -665,7 +665,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] UploadImage: Upload a Docker Image used for Scheduler jobs
+    // UploadImage: Upload a Docker Image used for Scheduler jobs
     ApiResponse<UploadImageInstructions> response = apiInstance.UploadImageWithHttpInfo(uploadImageRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

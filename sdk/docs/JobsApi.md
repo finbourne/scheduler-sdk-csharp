@@ -4,21 +4,21 @@ All URIs are relative to *https://fbn-prd.lusid.com/scheduler2*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateJob**](JobsApi.md#createjob) | **POST** /api/jobs | [EXPERIMENTAL] CreateJob: Create a new job |
-| [**DeleteJob**](JobsApi.md#deletejob) | **DELETE** /api/jobs/{scope}/{code} | [EXPERIMENTAL] DeleteJob: Delete a job |
-| [**GetHistory**](JobsApi.md#gethistory) | **GET** /api/jobs/history | [EXPERIMENTAL] GetHistory: Get the history of job runs |
-| [**GetJobConsoleOutput**](JobsApi.md#getjobconsoleoutput) | **GET** /api/jobs/history/{runId}/console | [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run |
-| [**GetRunHistory**](JobsApi.md#getrunhistory) | **GET** /api/jobs/history/{runId} | [EXPERIMENTAL] GetRunHistory: Get the history for a single job run |
-| [**GetSchedulesForAJob**](JobsApi.md#getschedulesforajob) | **GET** /api/jobs/{scope}/{code}/schedules | [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job |
-| [**ListJobs**](JobsApi.md#listjobs) | **GET** /api/jobs | [EXPERIMENTAL] ListJobs: List the available jobs |
+| [**CreateJob**](JobsApi.md#createjob) | **POST** /api/jobs | CreateJob: Create a new job |
+| [**DeleteJob**](JobsApi.md#deletejob) | **DELETE** /api/jobs/{scope}/{code} | DeleteJob: Delete a job |
+| [**GetHistory**](JobsApi.md#gethistory) | **GET** /api/jobs/history | GetHistory: Get the history of job runs |
+| [**GetJobConsoleOutput**](JobsApi.md#getjobconsoleoutput) | **GET** /api/jobs/history/{runId}/console | GetJobConsoleOutput: Gets the console output of a specific job run |
+| [**GetRunHistory**](JobsApi.md#getrunhistory) | **GET** /api/jobs/history/{runId} | GetRunHistory: Get the history for a single job run |
+| [**GetSchedulesForAJob**](JobsApi.md#getschedulesforajob) | **GET** /api/jobs/{scope}/{code}/schedules | GetSchedulesForAJob: Get all the schedules for a single job |
+| [**ListJobs**](JobsApi.md#listjobs) | **GET** /api/jobs | ListJobs: List the available jobs |
 | [**RunJob**](JobsApi.md#runjob) | **POST** /api/jobs/{scope}/{code}/$run | RunJob: Run a job immediately |
-| [**UpdateJob**](JobsApi.md#updatejob) | **PUT** /api/jobs/{scope}/{code} | [EXPERIMENTAL] UpdateJob: Update a JobDefinition |
+| [**UpdateJob**](JobsApi.md#updatejob) | **PUT** /api/jobs/{scope}/{code} | UpdateJob: Update a JobDefinition |
 
 <a id="createjob"></a>
 # **CreateJob**
 > JobDefinition CreateJob (CreateJobRequest createJobRequest)
 
-[EXPERIMENTAL] CreateJob: Create a new job
+CreateJob: Create a new job
 
 ### Example
 ```csharp
@@ -66,7 +66,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // JobDefinition result = apiInstance.CreateJob(createJobRequest, opts: opts);
 
-                // [EXPERIMENTAL] CreateJob: Create a new job
+                // CreateJob: Create a new job
                 JobDefinition result = apiInstance.CreateJob(createJobRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -87,7 +87,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] CreateJob: Create a new job
+    // CreateJob: Create a new job
     ApiResponse<JobDefinition> response = apiInstance.CreateJobWithHttpInfo(createJobRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -130,7 +130,7 @@ catch (ApiException e)
 # **DeleteJob**
 > ResourceListOfScheduleDefinition DeleteJob (string scope, string code)
 
-[EXPERIMENTAL] DeleteJob: Delete a job
+DeleteJob: Delete a job
 
 ### Example
 ```csharp
@@ -179,7 +179,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfScheduleDefinition result = apiInstance.DeleteJob(scope, code, opts: opts);
 
-                // [EXPERIMENTAL] DeleteJob: Delete a job
+                // DeleteJob: Delete a job
                 ResourceListOfScheduleDefinition result = apiInstance.DeleteJob(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -200,7 +200,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] DeleteJob: Delete a job
+    // DeleteJob: Delete a job
     ApiResponse<ResourceListOfScheduleDefinition> response = apiInstance.DeleteJobWithHttpInfo(scope, code);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -244,7 +244,7 @@ catch (ApiException e)
 # **GetHistory**
 > ResourceListOfJobHistory GetHistory (string? page = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
 
-[EXPERIMENTAL] GetHistory: Get the history of job runs
+GetHistory: Get the history of job runs
 
 ### Example
 ```csharp
@@ -296,7 +296,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfJobHistory result = apiInstance.GetHistory(page, sortBy, start, limit, filter, opts: opts);
 
-                // [EXPERIMENTAL] GetHistory: Get the history of job runs
+                // GetHistory: Get the history of job runs
                 ResourceListOfJobHistory result = apiInstance.GetHistory(page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -317,7 +317,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetHistory: Get the history of job runs
+    // GetHistory: Get the history of job runs
     ApiResponse<ResourceListOfJobHistory> response = apiInstance.GetHistoryWithHttpInfo(page, sortBy, start, limit, filter);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -364,7 +364,7 @@ catch (ApiException e)
 # **GetJobConsoleOutput**
 > string GetJobConsoleOutput (string runId)
 
-[EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
+GetJobConsoleOutput: Gets the console output of a specific job run
 
 ### Example
 ```csharp
@@ -412,7 +412,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // string result = apiInstance.GetJobConsoleOutput(runId, opts: opts);
 
-                // [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
+                // GetJobConsoleOutput: Gets the console output of a specific job run
                 string result = apiInstance.GetJobConsoleOutput(runId);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -433,7 +433,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetJobConsoleOutput: Gets the console output of a specific job run
+    // GetJobConsoleOutput: Gets the console output of a specific job run
     ApiResponse<string> response = apiInstance.GetJobConsoleOutputWithHttpInfo(runId);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -476,7 +476,7 @@ catch (ApiException e)
 # **GetRunHistory**
 > JobRunResult GetRunHistory (string runId)
 
-[EXPERIMENTAL] GetRunHistory: Get the history for a single job run
+GetRunHistory: Get the history for a single job run
 
 ### Example
 ```csharp
@@ -524,7 +524,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // JobRunResult result = apiInstance.GetRunHistory(runId, opts: opts);
 
-                // [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
+                // GetRunHistory: Get the history for a single job run
                 JobRunResult result = apiInstance.GetRunHistory(runId);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -545,7 +545,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetRunHistory: Get the history for a single job run
+    // GetRunHistory: Get the history for a single job run
     ApiResponse<JobRunResult> response = apiInstance.GetRunHistoryWithHttpInfo(runId);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -588,7 +588,7 @@ catch (ApiException e)
 # **GetSchedulesForAJob**
 > ResourceListOfScheduleDefinition GetSchedulesForAJob (string scope, string code)
 
-[EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
+GetSchedulesForAJob: Get all the schedules for a single job
 
 ### Example
 ```csharp
@@ -637,7 +637,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfScheduleDefinition result = apiInstance.GetSchedulesForAJob(scope, code, opts: opts);
 
-                // [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
+                // GetSchedulesForAJob: Get all the schedules for a single job
                 ResourceListOfScheduleDefinition result = apiInstance.GetSchedulesForAJob(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -658,7 +658,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetSchedulesForAJob: Get all the schedules for a single job
+    // GetSchedulesForAJob: Get all the schedules for a single job
     ApiResponse<ResourceListOfScheduleDefinition> response = apiInstance.GetSchedulesForAJobWithHttpInfo(scope, code);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -702,7 +702,7 @@ catch (ApiException e)
 # **ListJobs**
 > ResourceListOfJobDefinition ListJobs (string? page = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
 
-[EXPERIMENTAL] ListJobs: List the available jobs
+ListJobs: List the available jobs
 
 ### Example
 ```csharp
@@ -754,7 +754,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfJobDefinition result = apiInstance.ListJobs(page, sortBy, start, limit, filter, opts: opts);
 
-                // [EXPERIMENTAL] ListJobs: List the available jobs
+                // ListJobs: List the available jobs
                 ResourceListOfJobDefinition result = apiInstance.ListJobs(page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -775,7 +775,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListJobs: List the available jobs
+    // ListJobs: List the available jobs
     ApiResponse<ResourceListOfJobDefinition> response = apiInstance.ListJobsWithHttpInfo(page, sortBy, start, limit, filter);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -938,7 +938,7 @@ catch (ApiException e)
 # **UpdateJob**
 > JobDefinition UpdateJob (string scope, string code, UpdateJobRequest updateJobRequest)
 
-[EXPERIMENTAL] UpdateJob: Update a JobDefinition
+UpdateJob: Update a JobDefinition
 
 ### Example
 ```csharp
@@ -988,7 +988,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // JobDefinition result = apiInstance.UpdateJob(scope, code, updateJobRequest, opts: opts);
 
-                // [EXPERIMENTAL] UpdateJob: Update a JobDefinition
+                // UpdateJob: Update a JobDefinition
                 JobDefinition result = apiInstance.UpdateJob(scope, code, updateJobRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -1009,7 +1009,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] UpdateJob: Update a JobDefinition
+    // UpdateJob: Update a JobDefinition
     ApiResponse<JobDefinition> response = apiInstance.UpdateJobWithHttpInfo(scope, code, updateJobRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));

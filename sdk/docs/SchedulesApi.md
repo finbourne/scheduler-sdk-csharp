@@ -4,19 +4,19 @@ All URIs are relative to *https://fbn-prd.lusid.com/scheduler2*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**CreateSchedule**](SchedulesApi.md#createschedule) | **POST** /api/schedules | [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job |
-| [**DeleteSchedule**](SchedulesApi.md#deleteschedule) | **DELETE** /api/schedules/{scope}/{code} | [EXPERIMENTAL] DeleteSchedule: Delete a schedule |
-| [**EnabledSchedule**](SchedulesApi.md#enabledschedule) | **PUT** /api/schedules/{scope}/{code}/enabled | [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule |
-| [**GetSchedule**](SchedulesApi.md#getschedule) | **GET** /api/schedules/{scope}/{code} | [EXPERIMENTAL] GetSchedule: Get a single Schedule |
-| [**ListSchedules**](SchedulesApi.md#listschedules) | **GET** /api/schedules | [EXPERIMENTAL] ListSchedules: List the available Schedules |
-| [**RunSchedule**](SchedulesApi.md#runschedule) | **POST** /api/schedules/{scope}/{code}/$run | [EXPERIMENTAL] RunSchedule: Run a schedule immediately |
-| [**UpdateSchedule**](SchedulesApi.md#updateschedule) | **PUT** /api/schedules/{scope}/{code} | [EXPERIMENTAL] UpdateSchedule: Update a schedule. |
+| [**CreateSchedule**](SchedulesApi.md#createschedule) | **POST** /api/schedules | CreateSchedule: Create a Schedule for a job |
+| [**DeleteSchedule**](SchedulesApi.md#deleteschedule) | **DELETE** /api/schedules/{scope}/{code} | DeleteSchedule: Delete a schedule |
+| [**EnabledSchedule**](SchedulesApi.md#enabledschedule) | **PUT** /api/schedules/{scope}/{code}/enabled | EnabledSchedule: Enable/disable a schedule |
+| [**GetSchedule**](SchedulesApi.md#getschedule) | **GET** /api/schedules/{scope}/{code} | GetSchedule: Get a single Schedule |
+| [**ListSchedules**](SchedulesApi.md#listschedules) | **GET** /api/schedules | ListSchedules: List the available Schedules |
+| [**RunSchedule**](SchedulesApi.md#runschedule) | **POST** /api/schedules/{scope}/{code}/$run | RunSchedule: Run a schedule immediately |
+| [**UpdateSchedule**](SchedulesApi.md#updateschedule) | **PUT** /api/schedules/{scope}/{code} | UpdateSchedule: Update a schedule. |
 
 <a id="createschedule"></a>
 # **CreateSchedule**
 > ScheduleDefinition CreateSchedule (CreateScheduleRequest createScheduleRequest)
 
-[EXPERIMENTAL] CreateSchedule: Create a Schedule for a job
+CreateSchedule: Create a Schedule for a job
 
 ### Example
 ```csharp
@@ -64,7 +64,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ScheduleDefinition result = apiInstance.CreateSchedule(createScheduleRequest, opts: opts);
 
-                // [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job
+                // CreateSchedule: Create a Schedule for a job
                 ScheduleDefinition result = apiInstance.CreateSchedule(createScheduleRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -85,7 +85,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] CreateSchedule: Create a Schedule for a job
+    // CreateSchedule: Create a Schedule for a job
     ApiResponse<ScheduleDefinition> response = apiInstance.CreateScheduleWithHttpInfo(createScheduleRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -128,7 +128,7 @@ catch (ApiException e)
 # **DeleteSchedule**
 > void DeleteSchedule (string scope, string code)
 
-[EXPERIMENTAL] DeleteSchedule: Delete a schedule
+DeleteSchedule: Delete a schedule
 
 ### Example
 ```csharp
@@ -177,7 +177,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // apiInstance.DeleteSchedule(scope, code, opts: opts);
 
-                // [EXPERIMENTAL] DeleteSchedule: Delete a schedule
+                // DeleteSchedule: Delete a schedule
                 apiInstance.DeleteSchedule(scope, code);
             }
             catch (ApiException e)
@@ -197,7 +197,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] DeleteSchedule: Delete a schedule
+    // DeleteSchedule: Delete a schedule
     apiInstance.DeleteScheduleWithHttpInfo(scope, code);
 }
 catch (ApiException e)
@@ -238,7 +238,7 @@ void (empty response body)
 # **EnabledSchedule**
 > ScheduleDefinition EnabledSchedule (string scope, string code, bool enable)
 
-[EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
+EnabledSchedule: Enable/disable a schedule
 
 ### Example
 ```csharp
@@ -288,7 +288,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ScheduleDefinition result = apiInstance.EnabledSchedule(scope, code, enable, opts: opts);
 
-                // [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
+                // EnabledSchedule: Enable/disable a schedule
                 ScheduleDefinition result = apiInstance.EnabledSchedule(scope, code, enable);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -309,7 +309,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] EnabledSchedule: Enable/disable a schedule
+    // EnabledSchedule: Enable/disable a schedule
     ApiResponse<ScheduleDefinition> response = apiInstance.EnabledScheduleWithHttpInfo(scope, code, enable);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -354,7 +354,7 @@ catch (ApiException e)
 # **GetSchedule**
 > ScheduleDefinition GetSchedule (string scope, string code)
 
-[EXPERIMENTAL] GetSchedule: Get a single Schedule
+GetSchedule: Get a single Schedule
 
 ### Example
 ```csharp
@@ -403,7 +403,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ScheduleDefinition result = apiInstance.GetSchedule(scope, code, opts: opts);
 
-                // [EXPERIMENTAL] GetSchedule: Get a single Schedule
+                // GetSchedule: Get a single Schedule
                 ScheduleDefinition result = apiInstance.GetSchedule(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -424,7 +424,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] GetSchedule: Get a single Schedule
+    // GetSchedule: Get a single Schedule
     ApiResponse<ScheduleDefinition> response = apiInstance.GetScheduleWithHttpInfo(scope, code);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -468,7 +468,7 @@ catch (ApiException e)
 # **ListSchedules**
 > ResourceListOfScheduleDefinition ListSchedules (string? page = null, List<string>? sortBy = null, int? start = null, int? limit = null, string? filter = null)
 
-[EXPERIMENTAL] ListSchedules: List the available Schedules
+ListSchedules: List the available Schedules
 
 ### Example
 ```csharp
@@ -520,7 +520,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfScheduleDefinition result = apiInstance.ListSchedules(page, sortBy, start, limit, filter, opts: opts);
 
-                // [EXPERIMENTAL] ListSchedules: List the available Schedules
+                // ListSchedules: List the available Schedules
                 ResourceListOfScheduleDefinition result = apiInstance.ListSchedules(page, sortBy, start, limit, filter);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -541,7 +541,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListSchedules: List the available Schedules
+    // ListSchedules: List the available Schedules
     ApiResponse<ResourceListOfScheduleDefinition> response = apiInstance.ListSchedulesWithHttpInfo(page, sortBy, start, limit, filter);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -588,7 +588,7 @@ catch (ApiException e)
 # **RunSchedule**
 > StartScheduleResponse RunSchedule (string scope, string code)
 
-[EXPERIMENTAL] RunSchedule: Run a schedule immediately
+RunSchedule: Run a schedule immediately
 
 ### Example
 ```csharp
@@ -637,7 +637,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // StartScheduleResponse result = apiInstance.RunSchedule(scope, code, opts: opts);
 
-                // [EXPERIMENTAL] RunSchedule: Run a schedule immediately
+                // RunSchedule: Run a schedule immediately
                 StartScheduleResponse result = apiInstance.RunSchedule(scope, code);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -658,7 +658,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] RunSchedule: Run a schedule immediately
+    // RunSchedule: Run a schedule immediately
     ApiResponse<StartScheduleResponse> response = apiInstance.RunScheduleWithHttpInfo(scope, code);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
@@ -702,7 +702,7 @@ catch (ApiException e)
 # **UpdateSchedule**
 > ScheduleDefinition UpdateSchedule (string scope, string code, UpdateScheduleRequest updateScheduleRequest)
 
-[EXPERIMENTAL] UpdateSchedule: Update a schedule.
+UpdateSchedule: Update a schedule.
 
 ### Example
 ```csharp
@@ -752,7 +752,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ScheduleDefinition result = apiInstance.UpdateSchedule(scope, code, updateScheduleRequest, opts: opts);
 
-                // [EXPERIMENTAL] UpdateSchedule: Update a schedule.
+                // UpdateSchedule: Update a schedule.
                 ScheduleDefinition result = apiInstance.UpdateSchedule(scope, code, updateScheduleRequest);
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -773,7 +773,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] UpdateSchedule: Update a schedule.
+    // UpdateSchedule: Update a schedule.
     ApiResponse<ScheduleDefinition> response = apiInstance.UpdateScheduleWithHttpInfo(scope, code, updateScheduleRequest);
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
