@@ -8,6 +8,7 @@ All URIs are relative to *https://fbn-prd.lusid.com/scheduler2*
 | [**DeleteSchedule**](SchedulesApi.md#deleteschedule) | **DELETE** /api/schedules/{scope}/{code} | DeleteSchedule: Delete a schedule |
 | [**EnabledSchedule**](SchedulesApi.md#enabledschedule) | **PUT** /api/schedules/{scope}/{code}/enabled | EnabledSchedule: Enable/disable a schedule |
 | [**GetSchedule**](SchedulesApi.md#getschedule) | **GET** /api/schedules/{scope}/{code} | GetSchedule: Get a single Schedule |
+| [**GetValidTimezones**](SchedulesApi.md#getvalidtimezones) | **GET** /api/schedules/{scope}/{code}/enabled | GetValidTimezones: Get a list of valid timezones |
 | [**ListSchedules**](SchedulesApi.md#listschedules) | **GET** /api/schedules | ListSchedules: List the available Schedules |
 | [**RunSchedule**](SchedulesApi.md#runschedule) | **POST** /api/schedules/{scope}/{code}/$run | RunSchedule: Run a schedule immediately |
 | [**UpdateSchedule**](SchedulesApi.md#updateschedule) | **PUT** /api/schedules/{scope}/{code} | UpdateSchedule: Update a schedule. |
@@ -460,6 +461,119 @@ catch (ApiException e)
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
 | **400** | The details of the input related failure |  -  |
+| **0** | Error response |  -  |
+
+[Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)
+
+<a id="getvalidtimezones"></a>
+# **GetValidTimezones**
+> ResourceListOfString GetValidTimezones (string scope, string code)
+
+GetValidTimezones: Get a list of valid timezones
+
+### Example
+```csharp
+using System.Collections.Generic;
+using Finbourne.Scheduler.Sdk.Api;
+using Finbourne.Scheduler.Sdk.Client;
+using Finbourne.Scheduler.Sdk.Extensions;
+using Finbourne.Scheduler.Sdk.Model;
+using Newtonsoft.Json;
+
+namespace Examples
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            var secretsFilename = "secrets.json";
+            var path = Path.Combine(Directory.GetCurrentDirectory(), secretsFilename);
+            // Replace with the relevant values
+            File.WriteAllText(
+                path, 
+                @"{
+                    ""api"": {
+                        ""tokenUrl"": ""<your-token-url>"",
+                        ""schedulerUrl"": ""https://<your-domain>.lusid.com/scheduler2"",
+                        ""username"": ""<your-username>"",
+                        ""password"": ""<your-password>"",
+                        ""clientId"": ""<your-client-id>"",
+                        ""clientSecret"": ""<your-client-secret>""
+                    }
+                }");
+
+            // uncomment the below to use configuration overrides
+            // var opts = new ConfigurationOptions();
+            // opts.TimeoutMs = 30_000;
+
+            // uncomment the below to use an api factory with overrides
+            // var apiInstance = ApiFactoryBuilder.Build(secretsFilename, opts: opts).Api<SchedulesApi>();
+
+            var apiInstance = ApiFactoryBuilder.Build(secretsFilename).Api<SchedulesApi>();
+            var scope = "scope_example";  // string | 
+            var code = "code_example";  // string | 
+
+            try
+            {
+                // uncomment the below to set overrides at the request level
+                // ResourceListOfString result = apiInstance.GetValidTimezones(scope, code, opts: opts);
+
+                // GetValidTimezones: Get a list of valid timezones
+                ResourceListOfString result = apiInstance.GetValidTimezones(scope, code);
+                Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+            }
+            catch (ApiException e)
+            {
+                Console.WriteLine("Exception when calling SchedulesApi.GetValidTimezones: " + e.Message);
+                Console.WriteLine("Status Code: " + e.ErrorCode);
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetValidTimezonesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GetValidTimezones: Get a list of valid timezones
+    ApiResponse<ResourceListOfString> response = apiInstance.GetValidTimezonesWithHttpInfo(scope, code);
+    Console.WriteLine("Status Code: " + response.StatusCode);
+    Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
+    Console.WriteLine("Response Body: " + JsonConvert.SerializeObject(response.Data, Formatting.Indented));
+}
+catch (ApiException e)
+{
+    Console.WriteLine("Exception when calling SchedulesApi.GetValidTimezonesWithHttpInfo: " + e.Message);
+    Console.WriteLine("Status Code: " + e.ErrorCode);
+    Console.WriteLine(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **scope** | **string** |  |  |
+| **code** | **string** |  |  |
+
+### Return type
+
+[**ResourceListOfString**](ResourceListOfString.md)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 | **0** | Error response |  -  |
 
 [Back to top](#) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to Model list](../README.md#documentation-for-models) &#8226; [Back to README](../README.md)
