@@ -32,7 +32,7 @@ namespace Finbourne.Scheduler.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control
+        /// ListAccessControlledResources: Get resources available for access control
         /// </summary>
         /// <remarks>
         /// Get the comprehensive set of resources that are available for access control
@@ -44,7 +44,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         ResourceListOfAccessControlledResource ListAccessControlledResources(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control
+        /// ListAccessControlledResources: Get resources available for access control
         /// </summary>
         /// <remarks>
         /// Get the comprehensive set of resources that are available for access control
@@ -64,7 +64,7 @@ namespace Finbourne.Scheduler.Sdk.Api
     {
         #region Asynchronous Operations
         /// <summary>
-        /// [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control
+        /// ListAccessControlledResources: Get resources available for access control
         /// </summary>
         /// <remarks>
         /// Get the comprehensive set of resources that are available for access control
@@ -77,7 +77,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         System.Threading.Tasks.Task<ResourceListOfAccessControlledResource> ListAccessControlledResourcesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
-        /// [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control
+        /// ListAccessControlledResources: Get resources available for access control
         /// </summary>
         /// <remarks>
         /// Get the comprehensive set of resources that are available for access control
@@ -212,7 +212,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
+        /// ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -225,7 +225,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
+        /// ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -303,7 +303,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
+        /// ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
@@ -317,7 +317,7 @@ namespace Finbourne.Scheduler.Sdk.Api
         }
 
         /// <summary>
-        /// [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
+        /// ListAccessControlledResources: Get resources available for access control Get the comprehensive set of resources that are available for access control
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>

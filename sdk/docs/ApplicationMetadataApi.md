@@ -4,13 +4,13 @@ All URIs are relative to *https://fbn-prd.lusid.com/scheduler2*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
-| [**ListAccessControlledResources**](ApplicationMetadataApi.md#listaccesscontrolledresources) | **GET** /api/metadata/access/resources | [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control |
+| [**ListAccessControlledResources**](ApplicationMetadataApi.md#listaccesscontrolledresources) | **GET** /api/metadata/access/resources | ListAccessControlledResources: Get resources available for access control |
 
 <a id="listaccesscontrolledresources"></a>
 # **ListAccessControlledResources**
 > ResourceListOfAccessControlledResource ListAccessControlledResources ()
 
-[EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control
+ListAccessControlledResources: Get resources available for access control
 
 Get the comprehensive set of resources that are available for access control
 
@@ -59,7 +59,7 @@ namespace Examples
                 // uncomment the below to set overrides at the request level
                 // ResourceListOfAccessControlledResource result = apiInstance.ListAccessControlledResources(opts: opts);
 
-                // [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control
+                // ListAccessControlledResources: Get resources available for access control
                 ResourceListOfAccessControlledResource result = apiInstance.ListAccessControlledResources();
                 Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
             }
@@ -80,7 +80,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // [EXPERIMENTAL] ListAccessControlledResources: Get resources available for access control
+    // ListAccessControlledResources: Get resources available for access control
     ApiResponse<ResourceListOfAccessControlledResource> response = apiInstance.ListAccessControlledResourcesWithHttpInfo();
     Console.WriteLine("Status Code: " + response.StatusCode);
     Console.WriteLine("Response Headers: " + JsonConvert.SerializeObject(response.Headers, Formatting.Indented));
