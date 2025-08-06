@@ -43,7 +43,7 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <param name="tagLatestDockerImageCommand">tagLatestDockerImageCommand.</param>
         /// <param name="pushLatestDockerImageCommand">pushLatestDockerImageCommand.</param>
         /// <param name="expiryTime">expiryTime.</param>
-        public UploadImageInstructions(string dockerLoginCommand = default(string), string buildVersionedDockerImageCommand = default(string), string tagVersionedDockerImageCommand = default(string), string pushVersionedDockerImageCommand = default(string), string tagLatestDockerImageCommand = default(string), string pushLatestDockerImageCommand = default(string), DateTimeOffset expiryTime = default(DateTimeOffset))
+        public UploadImageInstructions(string dockerLoginCommand = default(string), string buildVersionedDockerImageCommand = default(string), string tagVersionedDockerImageCommand = default(string), string pushVersionedDockerImageCommand = default(string), string tagLatestDockerImageCommand = default(string), string pushLatestDockerImageCommand = default(string), DateTimeOffset? expiryTime = default(DateTimeOffset?))
         {
             // to ensure "dockerLoginCommand" is required (not null)
             if (dockerLoginCommand == null)
@@ -113,8 +113,8 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <summary>
         /// Gets or Sets ExpiryTime
         /// </summary>
-        [DataMember(Name = "expiryTime", EmitDefaultValue = false)]
-        public DateTimeOffset ExpiryTime { get; set; }
+        [DataMember(Name = "expiryTime", EmitDefaultValue = true)]
+        public DateTimeOffset? ExpiryTime { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
