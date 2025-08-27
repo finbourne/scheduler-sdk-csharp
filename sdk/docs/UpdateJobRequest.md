@@ -19,5 +19,38 @@ Name | Type | Description | Notes
 **CommandLineArgumentSeparator** | **string** | Value to separate command line arguments  e.g : If a job has a command line argument named &#39;folder&#39; and the runtime value is &#39;s3://path&#39; then this  would be supplied to the command as &#39;folder{separatorValue}s3://path&#39;  Default to a space | [optional] 
 **RequiredResources** | [**RequiredResources**](RequiredResources.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Scheduler.Sdk.Model;
+using System;
 
+string name = "name";
+string author = "example author";
+string description = "description";
+string imageName = "imageName";
+string imageTag = "imageTag";
+string minCpu = "example minCpu";
+string maxCpu = "example maxCpu";
+string minMemory = "example minMemory";
+string maxMemory = "example maxMemory";
+Dictionary<string, ArgumentDefinition> argumentDefinitions = new Dictionary<string, ArgumentDefinition>();
+string commandLineArgumentSeparator = "example commandLineArgumentSeparator";
+RequiredResources? requiredResources = new RequiredResources();
+
+
+UpdateJobRequest updateJobRequestInstance = new UpdateJobRequest(
+    name: name,
+    author: author,
+    description: description,
+    imageName: imageName,
+    imageTag: imageTag,
+    ttl: ttl,
+    minCpu: minCpu,
+    maxCpu: maxCpu,
+    minMemory: minMemory,
+    maxMemory: maxMemory,
+    argumentDefinitions: argumentDefinitions,
+    commandLineArgumentSeparator: commandLineArgumentSeparator,
+    requiredResources: requiredResources);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

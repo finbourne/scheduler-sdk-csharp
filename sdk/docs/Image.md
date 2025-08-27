@@ -13,5 +13,24 @@ Name | Type | Description | Notes
 **Tags** | [**List&lt;Tag&gt;**](Tag.md) | The tags of the image | [optional] 
 **ScanReport** | [**ScanReport**](ScanReport.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Scheduler.Sdk.Model;
+using System;
 
+string name = "example name";
+string digest = "example digest";
+List<Tag> tags = new List<Tag>();
+ScanReport? scanReport = new ScanReport();
+
+
+Image imageInstance = new Image(
+    name: name,
+    pushTime: pushTime,
+    pullTime: pullTime,
+    digest: digest,
+    size: size,
+    tags: tags,
+    scanReport: scanReport);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

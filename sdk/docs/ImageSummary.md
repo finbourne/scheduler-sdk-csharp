@@ -15,5 +15,29 @@ Name | Type | Description | Notes
 **ScanSummary** | [**ScanSummary**](ScanSummary.md) |  | [optional] 
 **Link** | [**Link**](Link.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Scheduler.Sdk.Model;
+using System;
 
+string name = "example name";
+string digest = "example digest";
+List<Tag> tags = new List<Tag>();
+string scanStatus = "example scanStatus";
+ScanSummary? scanSummary = new ScanSummary();
+
+Link? link = new Link();
+
+
+ImageSummary imageSummaryInstance = new ImageSummary(
+    name: name,
+    pushTime: pushTime,
+    pullTime: pullTime,
+    digest: digest,
+    size: size,
+    tags: tags,
+    scanStatus: scanStatus,
+    scanSummary: scanSummary,
+    link: link);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

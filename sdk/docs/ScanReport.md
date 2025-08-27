@@ -13,5 +13,24 @@ Name | Type | Description | Notes
 **Summary** | [**ScanSummary**](ScanSummary.md) |  | [optional] 
 **Vulnerabilities** | [**List&lt;Vulnerability&gt;**](Vulnerability.md) | List of Finbourne.Scheduler.WebApi.Dtos.Images.Vulnerability | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Scheduler.Sdk.Model;
+using System;
 
+string severity = "example severity";
+string status = "example status";
+ScanSummary? summary = new ScanSummary();
+
+List<Vulnerability> vulnerabilities = new List<Vulnerability>();
+
+ScanReport scanReportInstance = new ScanReport(
+    severity: severity,
+    status: status,
+    startTime: startTime,
+    endTime: endTime,
+    scanDuration: scanDuration,
+    summary: summary,
+    vulnerabilities: vulnerabilities);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

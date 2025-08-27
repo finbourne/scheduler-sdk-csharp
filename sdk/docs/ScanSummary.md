@@ -13,5 +13,20 @@ Name | Type | Description | Notes
 **Negligible** | **int?** | The number of Negligible severity vulnerabilities | [optional] 
 **Unknown** | **int?** | The number of Unknown severity vulnerabilities | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Scheduler.Sdk.Model;
+using System;
 
+
+ScanSummary scanSummaryInstance = new ScanSummary(
+    fixable: fixable,
+    total: total,
+    critical: critical,
+    high: high,
+    medium: medium,
+    low: low,
+    negligible: negligible,
+    unknown: unknown);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

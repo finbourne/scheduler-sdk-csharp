@@ -17,5 +17,35 @@ Name | Type | Description | Notes
 **Enabled** | **bool** | Specify whether schedule is enabled or not  Defaults to true | [optional] 
 **UseAsAuth** | **string** | Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Scheduler.Sdk.Model;
+using System;
 
+ResourceId scheduleId = new ResourceId();
+ResourceId jobId = new ResourceId();
+string name = "name";
+string description = "description";
+string author = "example author";
+string owner = "example owner";
+Dictionary<string, string> arguments = new Dictionary<string, string>();
+Trigger? trigger = new Trigger();
+
+List<Notification> notifications = new List<Notification>();
+bool enabled = //"True";
+string useAsAuth = "example useAsAuth";
+
+CreateScheduleRequest createScheduleRequestInstance = new CreateScheduleRequest(
+    scheduleId: scheduleId,
+    jobId: jobId,
+    name: name,
+    description: description,
+    author: author,
+    owner: owner,
+    arguments: arguments,
+    trigger: trigger,
+    notifications: notifications,
+    enabled: enabled,
+    useAsAuth: useAsAuth);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)

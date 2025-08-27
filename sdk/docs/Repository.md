@@ -14,5 +14,25 @@ Name | Type | Description | Notes
 **Images** | [**Link**](Link.md) |  | [optional] 
 **Links** | [**List&lt;Link&gt;**](Link.md) |  | [optional] 
 
-[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
+```csharp
+using Finbourne.Scheduler.Sdk.Model;
+using System;
 
+string name = "example name";
+string description = "example description";
+Link? images = new Link();
+
+List<Link> links = new List<Link>();
+
+Repository repositoryInstance = new Repository(
+    name: name,
+    creationTime: creationTime,
+    lastUpdate: lastUpdate,
+    description: description,
+    pullCount: pullCount,
+    imageCount: imageCount,
+    images: images,
+    links: links);
+```
+
+[Back to Model list](../README.md#documentation-for-models) &#8226; [Back to API list](../README.md#documentation-for-api-endpoints) &#8226; [Back to README](../README.md)
