@@ -23,7 +23,7 @@ using OpenAPIDateConverter = Finbourne.Scheduler.Sdk.Client.OpenAPIDateConverter
 namespace Finbourne.Scheduler.Sdk.Model
 {
     /// <summary>
-    /// Holds different kinds of triggers  A schedule may only have one type of trigger
+    /// Holds different kinds of triggers A schedule may only have one type of trigger
     /// </summary>
     [DataContract(Name = "Trigger")]
     public partial class Trigger : IEquatable<Trigger>, IValidatableObject

@@ -45,8 +45,8 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <param name="arguments">All arguments specified by this Schedule that will be passed in to the Job.</param>
         /// <param name="trigger">trigger.</param>
         /// <param name="notifications">Notifications for this Schedule.</param>
-        /// <param name="enabled">Specify whether schedule is enabled or not  Defaults to true.</param>
-        /// <param name="useAsAuth">Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request.</param>
+        /// <param name="enabled">Specify whether schedule is enabled or not Defaults to true.</param>
+        /// <param name="useAsAuth">Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request.</param>
         public CreateScheduleRequest(ResourceId scheduleId = default(ResourceId), ResourceId jobId = default(ResourceId), string name = default(string), string description = default(string), string author = default(string), string owner = default(string), Dictionary<string, string> arguments = default(Dictionary<string, string>), Trigger trigger = default(Trigger), List<Notification> notifications = default(List<Notification>), bool enabled = default(bool), string useAsAuth = default(string))
         {
             // to ensure "scheduleId" is required (not null)
@@ -143,16 +143,16 @@ namespace Finbourne.Scheduler.Sdk.Model
         public List<Notification> Notifications { get; set; }
 
         /// <summary>
-        /// Specify whether schedule is enabled or not  Defaults to true
+        /// Specify whether schedule is enabled or not Defaults to true
         /// </summary>
-        /// <value>Specify whether schedule is enabled or not  Defaults to true</value>
+        /// <value>Specify whether schedule is enabled or not Defaults to true</value>
         [DataMember(Name = "enabled", EmitDefaultValue = true)]
         public bool Enabled { get; set; }
 
         /// <summary>
-        /// Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request
+        /// Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request
         /// </summary>
-        /// <value>Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request</value>
+        /// <value>Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request</value>
         [DataMember(Name = "useAsAuth", EmitDefaultValue = true)]
         public string UseAsAuth { get; set; }
 

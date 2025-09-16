@@ -42,13 +42,13 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <param name="dateCreated">Date when job was created.</param>
         /// <param name="description">Description of this job.</param>
         /// <param name="dockerImage">Information about the docker image in the format “image_source/image_name:image_tag”.</param>
-        /// <param name="ttl">Time To Live of the job run in seconds  Defaults to 5 minutes(300).</param>
-        /// <param name="minCpu">Specifies  minimum number of CPUs to be allocated for the job  Default to 2.</param>
+        /// <param name="ttl">Time To Live of the job run in seconds Defaults to 5 minutes(300).</param>
+        /// <param name="minCpu">Specifies  minimum number of CPUs to be allocated for the job Default to 2.</param>
         /// <param name="maxCpu">Specifies  maximum number of CPUs to be allocated for the job.</param>
         /// <param name="minMemory">Specifies the minimum amount of memory (in GiB) to be allocated for the job.</param>
         /// <param name="maxMemory">Specifies the maximum amount of memory (in GiB) to be allocated for the job.</param>
         /// <param name="argumentDefinitions">All arguments for this job to run.</param>
-        /// <param name="commandLineArgumentSeparator">Value to separate command line arguments  e.g : If a job has a command line argument named &#39;folder&#39; and the runtime value is &#39;s3://path&#39; then this  would be supplied to the command as &#39;folder{separatorValue}s3://path&#39;  Default to a space.</param>
+        /// <param name="commandLineArgumentSeparator">Value to separate command line arguments e.g : If a job has a command line argument named &#39;folder&#39; and the runtime value is &#39;s3://path&#39; then this would be supplied to the command as &#39;folder{separatorValue}s3://path&#39; Default to a space.</param>
         /// <param name="requiredResources">requiredResources.</param>
         public JobDefinition(ResourceId jobId = default(ResourceId), string name = default(string), string author = default(string), DateTimeOffset dateCreated = default(DateTimeOffset), string description = default(string), string dockerImage = default(string), int ttl = default(int), string minCpu = default(string), string maxCpu = default(string), string minMemory = default(string), string maxMemory = default(string), Dictionary<string, ArgumentDefinition> argumentDefinitions = default(Dictionary<string, ArgumentDefinition>), string commandLineArgumentSeparator = default(string), RequiredResources requiredResources = default(RequiredResources))
         {
@@ -115,16 +115,16 @@ namespace Finbourne.Scheduler.Sdk.Model
         public string DockerImage { get; set; }
 
         /// <summary>
-        /// Time To Live of the job run in seconds  Defaults to 5 minutes(300)
+        /// Time To Live of the job run in seconds Defaults to 5 minutes(300)
         /// </summary>
-        /// <value>Time To Live of the job run in seconds  Defaults to 5 minutes(300)</value>
+        /// <value>Time To Live of the job run in seconds Defaults to 5 minutes(300)</value>
         [DataMember(Name = "ttl", EmitDefaultValue = true)]
         public int Ttl { get; set; }
 
         /// <summary>
-        /// Specifies  minimum number of CPUs to be allocated for the job  Default to 2
+        /// Specifies  minimum number of CPUs to be allocated for the job Default to 2
         /// </summary>
-        /// <value>Specifies  minimum number of CPUs to be allocated for the job  Default to 2</value>
+        /// <value>Specifies  minimum number of CPUs to be allocated for the job Default to 2</value>
         [DataMember(Name = "minCpu", EmitDefaultValue = true)]
         public string MinCpu { get; set; }
 
@@ -157,9 +157,9 @@ namespace Finbourne.Scheduler.Sdk.Model
         public Dictionary<string, ArgumentDefinition> ArgumentDefinitions { get; set; }
 
         /// <summary>
-        /// Value to separate command line arguments  e.g : If a job has a command line argument named &#39;folder&#39; and the runtime value is &#39;s3://path&#39; then this  would be supplied to the command as &#39;folder{separatorValue}s3://path&#39;  Default to a space
+        /// Value to separate command line arguments e.g : If a job has a command line argument named &#39;folder&#39; and the runtime value is &#39;s3://path&#39; then this would be supplied to the command as &#39;folder{separatorValue}s3://path&#39; Default to a space
         /// </summary>
-        /// <value>Value to separate command line arguments  e.g : If a job has a command line argument named &#39;folder&#39; and the runtime value is &#39;s3://path&#39; then this  would be supplied to the command as &#39;folder{separatorValue}s3://path&#39;  Default to a space</value>
+        /// <value>Value to separate command line arguments e.g : If a job has a command line argument named &#39;folder&#39; and the runtime value is &#39;s3://path&#39; then this would be supplied to the command as &#39;folder{separatorValue}s3://path&#39; Default to a space</value>
         [DataMember(Name = "commandLineArgumentSeparator", EmitDefaultValue = true)]
         public string CommandLineArgumentSeparator { get; set; }
 

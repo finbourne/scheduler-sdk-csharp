@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 **Description** | **string** | Argument description | 
 **Order** | **int** | The order of the argument | 
 **Constraints** | **string** | Constrains of the argument value | [optional] 
-**PassedAs** | **string** | Specifies how this argument should be passed in  Allowed values are: CommandLine or EnvironmentVariable    Defaults to: CommandLine | 
-**DefaultValue** | **string** | Specify a default value for this argument if no value is provided  The value needs to be convertible to the associated data type | [optional] 
+**PassedAs** | **string** | Specifies how this argument should be passed in Allowed values are: CommandLine or EnvironmentVariable  Defaults to: CommandLine | 
+**DefaultValue** | **string** | Specify a default value for this argument if no value is provided The value needs to be convertible to the associated data type | [optional] 
 
 ```csharp
 using Finbourne.Scheduler.Sdk.Model;

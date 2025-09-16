@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Description** | **string** | A description of the Schedule | [optional] 
 **Author** | **string** | Name of the author of this schedule | [optional] 
 **Owner** | **string** | Name of owner of this schedule | [optional] 
-**UseAsAuth** | **string** | User to runs schedule when automatically run and authenticates   requests in the schedule | [optional] 
+**UseAsAuth** | **string** | User to runs schedule when automatically run and authenticates  requests in the schedule | [optional] 
 **Arguments** | **Dictionary&lt;string, string&gt;** | All arguments specified by this Schedule that will be passed in to the Job | [optional] 
 **Trigger** | [**Trigger**](Trigger.md) |  | [optional] 
 **Notifications** | [**List&lt;Notification&gt;**](Notification.md) | Notifications for this Schedule | [optional] 

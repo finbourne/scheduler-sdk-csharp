@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **Description** | **string** | The updated description of the schedule | 
 **Author** | **string** | The updated author of the schedule | [optional] 
 **Owner** | **string** | The update owner of the schedule | [optional] 
-**Arguments** | **Dictionary&lt;string, string&gt;** | Updated arguments to be passed to the job  Note: The new arguments will completely replace old arguments | [optional] 
+**Arguments** | **Dictionary&lt;string, string&gt;** | Updated arguments to be passed to the job Note: The new arguments will completely replace old arguments | [optional] 
 **Trigger** | [**Trigger**](Trigger.md) |  | [optional] 
 **Notifications** | [**List&lt;Notification&gt;**](Notification.md) | Updated notifications for this schedule | [optional] 
-**Enabled** | **bool** | Specify whether schedule is enabled or not  Defaults to true | [optional] 
-**UseAsAuth** | **string** | Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request | [optional] 
+**Enabled** | **bool** | Specify whether schedule is enabled or not Defaults to true | [optional] 
+**UseAsAuth** | **string** | Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request | [optional] 
 
 ```csharp
 using Finbourne.Scheduler.Sdk.Model;

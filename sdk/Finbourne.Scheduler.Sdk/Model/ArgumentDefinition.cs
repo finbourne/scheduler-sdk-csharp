@@ -41,8 +41,8 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <param name="description">Argument description (required).</param>
         /// <param name="order">The order of the argument (required).</param>
         /// <param name="constraints">Constrains of the argument value.</param>
-        /// <param name="passedAs">Specifies how this argument should be passed in  Allowed values are: CommandLine or EnvironmentVariable    Defaults to: CommandLine (required).</param>
-        /// <param name="defaultValue">Specify a default value for this argument if no value is provided  The value needs to be convertible to the associated data type.</param>
+        /// <param name="passedAs">Specifies how this argument should be passed in Allowed values are: CommandLine or EnvironmentVariable  Defaults to: CommandLine (required).</param>
+        /// <param name="defaultValue">Specify a default value for this argument if no value is provided The value needs to be convertible to the associated data type.</param>
         public ArgumentDefinition(string dataType = default(string), bool required = default(bool), string description = default(string), int order = default(int), string constraints = default(string), string passedAs = default(string), string defaultValue = default(string))
         {
             // to ensure "dataType" is required (not null)
@@ -105,16 +105,16 @@ namespace Finbourne.Scheduler.Sdk.Model
         public string Constraints { get; set; }
 
         /// <summary>
-        /// Specifies how this argument should be passed in  Allowed values are: CommandLine or EnvironmentVariable    Defaults to: CommandLine
+        /// Specifies how this argument should be passed in Allowed values are: CommandLine or EnvironmentVariable  Defaults to: CommandLine
         /// </summary>
-        /// <value>Specifies how this argument should be passed in  Allowed values are: CommandLine or EnvironmentVariable    Defaults to: CommandLine</value>
+        /// <value>Specifies how this argument should be passed in Allowed values are: CommandLine or EnvironmentVariable  Defaults to: CommandLine</value>
         [DataMember(Name = "passedAs", IsRequired = true, EmitDefaultValue = true)]
         public string PassedAs { get; set; }
 
         /// <summary>
-        /// Specify a default value for this argument if no value is provided  The value needs to be convertible to the associated data type
+        /// Specify a default value for this argument if no value is provided The value needs to be convertible to the associated data type
         /// </summary>
-        /// <value>Specify a default value for this argument if no value is provided  The value needs to be convertible to the associated data type</value>
+        /// <value>Specify a default value for this argument if no value is provided The value needs to be convertible to the associated data type</value>
         [DataMember(Name = "defaultValue", EmitDefaultValue = true)]
         public string DefaultValue { get; set; }
 

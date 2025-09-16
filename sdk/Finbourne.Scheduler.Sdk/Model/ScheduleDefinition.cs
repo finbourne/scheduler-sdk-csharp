@@ -42,7 +42,7 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <param name="description">A description of the Schedule.</param>
         /// <param name="author">Name of the author of this schedule.</param>
         /// <param name="owner">Name of owner of this schedule.</param>
-        /// <param name="useAsAuth">User to runs schedule when automatically run and authenticates   requests in the schedule.</param>
+        /// <param name="useAsAuth">User to runs schedule when automatically run and authenticates  requests in the schedule.</param>
         /// <param name="arguments">All arguments specified by this Schedule that will be passed in to the Job.</param>
         /// <param name="trigger">trigger.</param>
         /// <param name="notifications">Notifications for this Schedule.</param>
@@ -108,9 +108,9 @@ namespace Finbourne.Scheduler.Sdk.Model
         public string Owner { get; set; }
 
         /// <summary>
-        /// User to runs schedule when automatically run and authenticates   requests in the schedule
+        /// User to runs schedule when automatically run and authenticates  requests in the schedule
         /// </summary>
-        /// <value>User to runs schedule when automatically run and authenticates   requests in the schedule</value>
+        /// <value>User to runs schedule when automatically run and authenticates  requests in the schedule</value>
         [DataMember(Name = "useAsAuth", EmitDefaultValue = true)]
         public string UseAsAuth { get; set; }
 

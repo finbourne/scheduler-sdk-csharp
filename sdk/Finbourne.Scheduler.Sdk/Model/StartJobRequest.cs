@@ -33,7 +33,7 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// </summary>
         /// <param name="arguments">All arguments needed for the Job to run.</param>
         /// <param name="notifications">Notifications for this Job.</param>
-        /// <param name="useAsAuth">Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request.</param>
+        /// <param name="useAsAuth">Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request.</param>
         public StartJobRequest(Dictionary<string, string> arguments = default(Dictionary<string, string>), List<Notification> notifications = default(List<Notification>), string useAsAuth = default(string))
         {
             this.Arguments = arguments;
@@ -56,9 +56,9 @@ namespace Finbourne.Scheduler.Sdk.Model
         public List<Notification> Notifications { get; set; }
 
         /// <summary>
-        /// Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request
+        /// Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request
         /// </summary>
-        /// <value>Id of user associated with schedule. All calls to FINBOURNE services  as part of execution of this schedule will be authenticated as this   user. Can be null, in which case we&#39;ll default to that of the user   making this request</value>
+        /// <value>Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request</value>
         [DataMember(Name = "useAsAuth", EmitDefaultValue = true)]
         public string UseAsAuth { get; set; }
 
