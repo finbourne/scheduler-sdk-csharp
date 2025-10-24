@@ -131,12 +131,10 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// GetValidTimezones: Get a list of valid timezones
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scope"></param>
-        /// <param name="code"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfString</returns>
-        ResourceListOfString GetValidTimezones(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
+        ResourceListOfString GetValidTimezones(int operationIndex = 0, ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetValidTimezones: Get a list of valid timezones
@@ -145,12 +143,10 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scope"></param>
-        /// <param name="code"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfString</returns>
-        Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString> GetValidTimezonesWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null);
+        Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString> GetValidTimezonesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null);
         /// <summary>
         /// ListSchedules: List the available Schedules
         /// </summary>
@@ -363,13 +359,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scope"></param>
-        /// <param name="code"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfString</returns>
-        System.Threading.Tasks.Task<ResourceListOfString> GetValidTimezonesAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<ResourceListOfString> GetValidTimezonesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
 
         /// <summary>
         /// GetValidTimezones: Get a list of valid timezones
@@ -378,13 +372,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scope"></param>
-        /// <param name="code"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfString)</returns>
-        System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString>> GetValidTimezonesWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
+        System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString>> GetValidTimezonesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null);
         /// <summary>
         /// ListSchedules: List the available Schedules
         /// </summary>
@@ -1489,14 +1481,12 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// GetValidTimezones: Get a list of valid timezones 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scope"></param>
-        /// <param name="code"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ResourceListOfString</returns>
-        public ResourceListOfString GetValidTimezones(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null)
+        public ResourceListOfString GetValidTimezones(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString> localVarResponse = GetValidTimezonesWithHttpInfo(scope, code, opts: opts);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString> localVarResponse = GetValidTimezonesWithHttpInfo(opts: opts);
             return localVarResponse.Data;
         }
 
@@ -1504,25 +1494,11 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// GetValidTimezones: Get a list of valid timezones 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scope"></param>
-        /// <param name="code"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>ApiResponse of ResourceListOfString</returns>
-        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString> GetValidTimezonesWithHttpInfo(string scope, string code, int operationIndex = 0, ConfigurationOptions? opts = null)
+        public Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString> GetValidTimezonesWithHttpInfo(int operationIndex = 0, ConfigurationOptions? opts = null)
         {
-            // verify the required parameter 'scope' is set
-            if (scope == null)
-            {
-                throw new Finbourne.Scheduler.Sdk.Client.ApiException(400, "Missing required parameter 'scope' when calling SchedulesApi->GetValidTimezones");
-            }
-
-            // verify the required parameter 'code' is set
-            if (code == null)
-            {
-                throw new Finbourne.Scheduler.Sdk.Client.ApiException(400, "Missing required parameter 'code' when calling SchedulesApi->GetValidTimezones");
-            }
-
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
 
             if (opts is { TimeoutMs: not null })
@@ -1557,8 +1533,6 @@ namespace Finbourne.Scheduler.Sdk.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("scope", Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToString(scope)); // path parameter
-            localVarRequestOptions.PathParameters.Add("code", Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
 
             localVarRequestOptions.Operation = "SchedulesApi.GetValidTimezones";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1581,7 +1555,7 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<ResourceListOfString>("/api/schedules/{scope}/{code}/enabled", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<ResourceListOfString>("/api/schedules/timezones", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
                 Exception _exception = this.ExceptionFactory("GetValidTimezones", localVarResponse);
@@ -1598,15 +1572,13 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// GetValidTimezones: Get a list of valid timezones 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scope"></param>
-        /// <param name="code"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ResourceListOfString</returns>
-        public async System.Threading.Tasks.Task<ResourceListOfString> GetValidTimezonesAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<ResourceListOfString> GetValidTimezonesAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString> localVarResponse = await GetValidTimezonesWithHttpInfoAsync(scope, code, operationIndex, cancellationToken, opts).ConfigureAwait(false);
+            Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString> localVarResponse = await GetValidTimezonesWithHttpInfoAsync(operationIndex, cancellationToken, opts).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
@@ -1614,26 +1586,12 @@ namespace Finbourne.Scheduler.Sdk.Api
         /// GetValidTimezones: Get a list of valid timezones 
         /// </summary>
         /// <exception cref="Finbourne.Scheduler.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="scope"></param>
-        /// <param name="code"></param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <param name="opts">Options for this request.</param>
         /// <returns>Task of ApiResponse (ResourceListOfString)</returns>
-        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString>> GetValidTimezonesWithHttpInfoAsync(string scope, string code, int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
+        public async System.Threading.Tasks.Task<Finbourne.Scheduler.Sdk.Client.ApiResponse<ResourceListOfString>> GetValidTimezonesWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken), ConfigurationOptions? opts = null)
         {
-            // verify the required parameter 'scope' is set
-            if (scope == null)
-            {
-                throw new Finbourne.Scheduler.Sdk.Client.ApiException(400, "Missing required parameter 'scope' when calling SchedulesApi->GetValidTimezones");
-            }
-
-            // verify the required parameter 'code' is set
-            if (code == null)
-            {
-                throw new Finbourne.Scheduler.Sdk.Client.ApiException(400, "Missing required parameter 'code' when calling SchedulesApi->GetValidTimezones");
-            }
-
 
             Finbourne.Scheduler.Sdk.Client.RequestOptions localVarRequestOptions = new Finbourne.Scheduler.Sdk.Client.RequestOptions();
 
@@ -1669,8 +1627,6 @@ namespace Finbourne.Scheduler.Sdk.Api
                 localVarRequestOptions.HeaderParameters.Add("Accept", localVarAccept);
             }
 
-            localVarRequestOptions.PathParameters.Add("scope", Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToString(scope)); // path parameter
-            localVarRequestOptions.PathParameters.Add("code", Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToString(code)); // path parameter
 
             localVarRequestOptions.Operation = "SchedulesApi.GetValidTimezones";
             localVarRequestOptions.OperationIndex = operationIndex;
@@ -1693,7 +1649,7 @@ namespace Finbourne.Scheduler.Sdk.Api
             }
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<ResourceListOfString>("/api/schedules/{scope}/{code}/enabled", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<ResourceListOfString>("/api/schedules/timezones", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
@@ -1775,22 +1731,27 @@ namespace Finbourne.Scheduler.Sdk.Api
 
             if (page != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
             }
             if (sortBy != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
             }
             if (start != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
             }
             if (limit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (filter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 

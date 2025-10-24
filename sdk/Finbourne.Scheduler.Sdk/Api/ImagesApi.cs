@@ -673,22 +673,27 @@ namespace Finbourne.Scheduler.Sdk.Api
             localVarRequestOptions.PathParameters.Add("name", Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToString(name)); // path parameter
             if (page != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
             }
             if (sortBy != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
             }
             if (start != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
             }
             if (limit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (filter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
@@ -924,22 +929,27 @@ namespace Finbourne.Scheduler.Sdk.Api
 
             if (page != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "page", page));
             }
             if (sortBy != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("multi", "sortBy", sortBy));
             }
             if (start != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "start", start));
             }
             if (limit != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "limit", limit));
             }
             if (filter != null)
             {
+
                 localVarRequestOptions.QueryParameters.Add(Finbourne.Scheduler.Sdk.Client.ClientUtils.ParameterToMultiMap("", "filter", filter));
             }
 
