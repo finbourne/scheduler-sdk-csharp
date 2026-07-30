@@ -33,12 +33,14 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// </summary>
         /// <param name="arguments">All arguments needed for the Job to run.</param>
         /// <param name="notifications">Notifications for this Job.</param>
-        /// <param name="useAsAuth">Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request.</param>
-        public StartJobRequest(Dictionary<string, string> arguments = default(Dictionary<string, string>), List<Notification> notifications = default(List<Notification>), string useAsAuth = default(string))
+        /// <param name="useAsAuth">Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this user. Can be null, in which case we&#39;ll default to that of the user making this request.</param>
+        /// <param name="runId">Optional pre-generated RunId (Guid format) for this job run. When provided, this is used as the RunId instead of generating a new one, allowing the caller to pre-generate and track the run before it starts..</param>
+        public StartJobRequest(Dictionary<string, string> arguments = default(Dictionary<string, string>), List<Notification> notifications = default(List<Notification>), string useAsAuth = default(string), string runId = default(string))
         {
             this.Arguments = arguments;
             this.Notifications = notifications;
             this.UseAsAuth = useAsAuth;
+            this.RunId = runId;
         }
 
         /// <summary>
@@ -56,11 +58,18 @@ namespace Finbourne.Scheduler.Sdk.Model
         public List<Notification> Notifications { get; set; }
 
         /// <summary>
-        /// Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request
+        /// Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this user. Can be null, in which case we&#39;ll default to that of the user making this request
         /// </summary>
-        /// <value>Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this  user. Can be null, in which case we&#39;ll default to that of the user  making this request</value>
+        /// <value>Id of user associated with schedule. All calls to FINBOURNE services as part of execution of this schedule will be authenticated as this user. Can be null, in which case we&#39;ll default to that of the user making this request</value>
         [DataMember(Name = "useAsAuth", EmitDefaultValue = true)]
         public string UseAsAuth { get; set; }
+
+        /// <summary>
+        /// Optional pre-generated RunId (Guid format) for this job run. When provided, this is used as the RunId instead of generating a new one, allowing the caller to pre-generate and track the run before it starts.
+        /// </summary>
+        /// <value>Optional pre-generated RunId (Guid format) for this job run. When provided, this is used as the RunId instead of generating a new one, allowing the caller to pre-generate and track the run before it starts.</value>
+        [DataMember(Name = "runId", EmitDefaultValue = true)]
+        public string RunId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -73,6 +82,7 @@ namespace Finbourne.Scheduler.Sdk.Model
             sb.Append("  Arguments: ").Append(Arguments).Append("\n");
             sb.Append("  Notifications: ").Append(Notifications).Append("\n");
             sb.Append("  UseAsAuth: ").Append(UseAsAuth).Append("\n");
+            sb.Append("  RunId: ").Append(RunId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,6 +134,11 @@ namespace Finbourne.Scheduler.Sdk.Model
                     this.UseAsAuth == input.UseAsAuth ||
                     (this.UseAsAuth != null &&
                     this.UseAsAuth.Equals(input.UseAsAuth))
+                ) && 
+                (
+                    this.RunId == input.RunId ||
+                    (this.RunId != null &&
+                    this.RunId.Equals(input.RunId))
                 );
         }
 
@@ -148,6 +163,10 @@ namespace Finbourne.Scheduler.Sdk.Model
                 {
                     hashCode = (hashCode * 59) + this.UseAsAuth.GetHashCode();
                 }
+                if (this.RunId != null)
+                {
+                    hashCode = (hashCode * 59) + this.RunId.GetHashCode();
+                }
                 return hashCode;
             }
         }
@@ -159,6 +178,25 @@ namespace Finbourne.Scheduler.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // RunId (string) maxLength
+            if (this.RunId != null && this.RunId.Length > 36)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RunId, length must be less than 36.", new [] { "RunId" });
+            }
+
+            // RunId (string) minLength
+            if (this.RunId != null && this.RunId.Length < 36)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RunId, length must be greater than 36.", new [] { "RunId" });
+            }
+
+            // RunId (string) pattern
+            Regex regexRunId = new Regex(@"^[a-zA-Z0-9\-]+$", RegexOptions.CultureInvariant);
+            if (false == regexRunId.Match(this.RunId).Success)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for RunId, must match a pattern of " + regexRunId, new [] { "RunId" });
+            }
+
             yield break;
         }
     }
