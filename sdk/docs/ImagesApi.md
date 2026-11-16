@@ -75,7 +75,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetImageWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -192,7 +191,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListImagesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -313,7 +311,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListRepositoriesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -431,7 +428,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the UploadImageWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

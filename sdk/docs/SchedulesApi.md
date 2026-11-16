@@ -79,7 +79,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the CreateScheduleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -191,7 +190,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the DeleteScheduleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -303,7 +301,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the EnabledScheduleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -418,7 +415,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetScheduleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -530,7 +526,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetValidTimezonesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -641,7 +636,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListSchedulesWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -758,7 +752,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the RunScheduleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -873,7 +866,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the UpdateScheduleWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 

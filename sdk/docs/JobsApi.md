@@ -80,7 +80,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the CreateJobWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -193,7 +192,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the DeleteJobWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -310,7 +308,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetHistoryWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -426,7 +423,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetJobConsoleOutputWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -538,7 +534,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetRunHistoryWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -651,7 +646,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the GetSchedulesForAJobWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -768,7 +762,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the ListJobsWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -886,7 +879,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the RunJobWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
@@ -1002,7 +994,6 @@ namespace Examples
     }
 }
 ```
-
 #### Using the UpdateJobWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
